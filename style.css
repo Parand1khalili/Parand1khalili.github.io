@@ -1,0 +1,125 @@
+/* style.css */
+
+:root {
+  --primary-color: #333;
+  --bg-color: #fefefe;
+  --accent-color: #e4e4e4;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: var(--bg-color);
+  color: var(--primary-color);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+}
+
+header .title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-right: auto;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+  text-transform: lowercase;
+}
+
+.container {
+  display: flex;
+  padding: 2rem;
+  gap: 3rem;
+}
+
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.sidebar img {
+  width: 120px;
+  border-radius: 50%;
+}
+
+.sidebar p {
+  font-size: 0.9rem;
+  margin: 0.2rem 0;
+  color: #555;
+}
+
+.sidebar a {
+  display: block;
+  margin: 0.3rem 0;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  flex: 1;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+.project {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.project h2 {
+  margin-bottom: 0.5rem;
+}
+
+.project a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+nav a.active {
+  font-weight: bolder;
+  border-bottom: 2px solid #333 ;
+}
+footer {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: #f0f0f0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  border-top: 1px solid #ddd;
+}
+
+footer a {
+  color: #2979ff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .social {
+  margin-top: 0.5rem;
+}
