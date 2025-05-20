@@ -1,8 +1,8 @@
 /* style.css */
 
 :root {
-  --primary-color: #333;
-  --bg-color: #fefefe;
+  --primary-color: #111; 
+  --bg-color: #ffffff;
   --accent-color: #e4e4e4;
 }
 
@@ -122,4 +122,17 @@ footer a:hover {
 
 footer .social {
   margin-top: 0.5rem;
+}
+
+a {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.sidebar a,
+.project a,
+nav a,
+footer a {
+  padding: 12px;
+  display: inline-block;
 }
