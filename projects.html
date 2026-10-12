@@ -1,38 +1,368 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f6f5f0">
-  <meta name="description" content="Selected research, machine learning, data analytics, systems, and software projects by Parand Khalili.">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"><script defer src="script.js"></script><title>Projects — Parand Khalili</title>
-</head>
-<body data-page="projects">
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header" id="top"><div class="header-inner wrap">
-    <a class="wordmark" href="index.html" aria-label="Parand Khalili — home"><span class="wordmark-symbol">p<span>·</span>k</span><span class="wordmark-full">PARAND<br>KHALILI</span></a>
-    <nav class="desktop-nav" aria-label="Primary navigation"><a href="index.html#about">ABOUT <span>01</span></a><a class="is-active" href="projects.html">WORK <span>02</span></a><a href="index.html#experience">EXPERIENCE <span>03</span></a><a href="index.html#contact">CONTACT <span>04</span></a></nav>
-    <a class="header-action" href="assets/Parand_Khalili_CV.pdf" target="_blank" rel="noopener">VIEW CV <span aria-hidden="true">↗</span></a><button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button></div>
-    <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation" hidden><a href="index.html#about">About</a><a href="projects.html">Work</a><a href="index.html#experience">Experience</a><a href="index.html#contact">Contact</a><a href="assets/Parand_Khalili_CV.pdf" target="_blank">View CV ↗</a></nav>
-  </header>
-  <main id="main">
-    <section class="page-hero wrap"><a class="page-back" href="index.html"><span aria-hidden="true">←</span> BACK TO HOME</a><div class="section-label"><span class="section-index">[ INDEX ]</span> EXPERIMENTS / APPLIED WORK / SYSTEMS</div><h1>Selected <em>work.</em></h1><p>A living collection of ideas, investigations, and engineering projects — from graph machine learning and data analytics to low-level systems.</p></section>
-    <div class="wrap"><div class="filter-bar" aria-label="Filter projects by area"><span class="filter-label">BROWSE BY DISCIPLINE:</span><button type="button" class="filter-button active" data-filter="all" aria-pressed="true">ALL PROJECTS</button><button type="button" class="filter-button" data-filter="ml" aria-pressed="false">AI / ML</button><button type="button" class="filter-button" data-filter="data" aria-pressed="false">DATA & BI</button><button type="button" class="filter-button" data-filter="systems" aria-pressed="false">SYSTEMS / SOFTWARE</button></div>
-      <div class="projects-grid">
-        <article class="project-tile reveal" data-category="ml"><div class="project-top"><span>01 / RESEARCH · ONGOING</span><span>2026—</span></div><h2>Structure-Aware LLMs for Graph Node Labeling</h2><p>Undergraduate thesis studying label-efficient node classification, structure-aware LLM prompts using 1-hop/2-hop neighbors and random walks, and training graph neural networks on the resulting annotations. Research in progress.</p><div class="tag-row"><span>LLMs</span><span>Graph ML</span><span>PyG</span><span>Active Learning</span></div></article>
-        <article class="project-tile reveal" data-category="ml data"><div class="project-top"><span>02 / APPLIED ML</span><span>2026</span></div><h2>Credit Scoring & Loan Default Prediction</h2><p>End-to-end risk prediction pipeline featuring cost-sensitive decision making, a tuned Random Forest model, and risk segmentation. Reported performance: 87.41% accuracy, 79.21% balanced accuracy, and 4.65 lift at the top decile.</p><div class="tag-row"><span>Python</span><span>Scikit-learn</span><span>Random Forest</span></div><span class="tile-external" aria-hidden="true">↗</span><a class="tile-link" href="https://github.com/Parand1khalili/credit-scoring-risk-mitigation" target="_blank" rel="noopener noreferrer" aria-label="Credit Scoring project on GitHub"></a></article>
-        <article class="project-tile reveal" data-category="data"><div class="project-top"><span>03 / BUSINESS INTELLIGENCE</span><span>2025</span></div><h2>HR Analytics Dashboard</h2><p>Data modeling, transformation, and visual analysis of hiring patterns, employee attrition, and salary distributions through an interactive Power BI dashboard.</p><div class="tag-row"><span>Power BI</span><span>Python</span><span>DAX</span><span>Data Visualization</span></div><span class="tile-external" aria-hidden="true">↗</span><a class="tile-link" href="https://github.com/Parand1khalili/PowerBI_HR_Analysis" target="_blank" rel="noopener noreferrer" aria-label="HR Analytics project on GitHub"></a></article>
-        <article class="project-tile reveal" data-category="ml"><div class="project-top"><span>04 / DEEP LEARNING</span><span>2025</span></div><h2>MyTorch & MLP Classifier</h2><p>A custom neural network library exploring tensors, layers, activation functions, losses, and optimization, alongside a PyTorch MLP classifier on the Wisconsin breast cancer dataset.</p><div class="tag-row"><span>Python</span><span>NumPy</span><span>PyTorch</span><span>Neural Networks</span></div><span class="tile-external" aria-hidden="true">↗</span><a class="tile-link" href="https://github.com/Parand1khalili/MLP-Classifier-MyTorch-Framework" target="_blank" rel="noopener noreferrer" aria-label="MyTorch project on GitHub"></a></article>
-        <article class="project-tile reveal" data-category="ml"><div class="project-top"><span>05 / CLASSICAL & MODERN AI</span><span>2025</span></div><h2>Fundamentals of Artificial Intelligence</h2><p>A set of AI implementations: Sokoban search with A*, crossword constraint satisfaction, Minimax and Alpha-Beta game agents, Q-learning, and Bayesian inference.</p><div class="tag-row"><span>A*</span><span>CSP</span><span>Reinforcement Learning</span><span>Bayesian Networks</span></div><span class="tile-external" aria-hidden="true">↗</span><a class="tile-link" href="https://github.com/Parand1khalili/Fundamentals-of-AI" target="_blank" rel="noopener noreferrer" aria-label="Fundamentals of AI project on GitHub"></a></article>
-        <article class="project-tile reveal" data-category="ml"><div class="project-top"><span>06 / EVOLUTIONARY ALGORITHMS</span><span>2025</span></div><h2>Tetris AI via Genetic Algorithms</h2><p>An autonomous Tetris agent trained through evolutionary strategies: selection, crossover, and mutation, with a custom fitness function and visualized training behavior.</p><div class="tag-row"><span>Python</span><span>Pygame</span><span>Genetic Algorithms</span></div></article>
-        <article class="project-tile reveal" data-category="systems"><div class="project-top"><span>07 / OPERATING SYSTEMS</span><span>2025</span></div><h2>xv6 Kernel Enhancements</h2><p>Extended xv6 with custom system calls and multithreading features, working with process execution, memory management, and lower-level C development.</p><div class="tag-row"><span>C</span><span>OS</span><span>Linux</span><span>Docker</span></div><span class="tile-external" aria-hidden="true">↗</span><a class="tile-link" href="https://github.com/Parand1khalili/xv6_syscall" target="_blank" rel="noopener noreferrer" aria-label="xv6 project on GitHub"></a></article>
-        <article class="project-tile reveal" data-category="systems"><div class="project-top"><span>08 / BACKEND ENGINEERING</span><span>SOFTWARE</span></div><h2>English Learning Web App</h2><p>A picture-based English learning application with a Django backend and JavaScript frontend, created as a software engineering project.</p><div class="tag-row"><span>Django</span><span>JavaScript</span><span>Backend</span></div><span class="tile-external" aria-hidden="true">↗</span><a class="tile-link" href="https://github.com/Parand1khalili/Software-Engineering-1403-01_G1" target="_blank" rel="noopener noreferrer" aria-label="English Learning app project on GitHub"></a></article>
-        <article class="project-tile reveal" data-category="systems"><div class="project-top"><span>09 / APPLICATION DEVELOPMENT</span><span>SOFTWARE</span></div><h2>TwitJava — A Social Platform Simulation</h2><p>A JavaFX-based social platform simulation with authentication, posts, social interactions, and concurrency handling.</p><div class="tag-row"><span>Java</span><span>JavaFX</span><span>Concurrency</span></div><span class="tile-external" aria-hidden="true">↗</span><a class="tile-link" href="https://github.com/Parand1khalili/twitterFinal" target="_blank" rel="noopener noreferrer" aria-label="TwitJava project on GitHub"></a></article>
-        <article class="project-tile reveal" data-category="systems"><div class="project-top"><span>10 / MOBILE APP</span><span>SOFTWARE</span></div><h2>Hipka Music</h2><p>An Android music application project with a Kotlin-based codebase and Gradle build setup.</p><div class="tag-row"><span>Kotlin</span><span>Android</span><span>Mobile</span></div><span class="tile-external" aria-hidden="true">↗</span><a class="tile-link" href="https://github.com/Parand1khalili/Hipka_Music" target="_blank" rel="noopener noreferrer" aria-label="Hipka Music project on GitHub"></a></article>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#FAF9F3">
+    <meta name="description" content="Explore Parand Khalili's ongoing graph ML thesis and projects in machine learning, data analytics, business intelligence, and software engineering.">
+    <meta name="author" content="Parand Khalili">
+    <meta property="og:title" content="Project Index | Parand Khalili">
+    <meta property="og:description" content="Graph ML research, applied analytics, and software engineering projects.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://parand1khalili.github.io/projects.html">
+    <meta property="og:site_name" content="Parand Khalili">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://parand1khalili.github.io/assets/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Parand Khalili — Research, analytics, and engineering projects">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Project Index | Parand Khalili">
+    <meta name="twitter:description" content="Research, analytics, and software projects by Parand Khalili.">
+    <meta name="twitter:image" content="https://parand1khalili.github.io/assets/social-preview.png">
+    <link rel="canonical" href="https://parand1khalili.github.io/projects.html">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer>
+    </script>
+    <title>Project Index | Parand Khalili</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="top">
+      <div class="header-inner wrap">
+        <a class="wordmark" href="index.html" aria-label="Parand Khalili — home">
+          <span class="wordmark-initials" aria-hidden="true"><img src="assets/favicon.svg" width="39" height="39" alt=""></span>
+          <span class="wordmark-name">Parand<br> Khalili</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-navigation" hidden>
+          Menu <span class="menu-icon" aria-hidden="true">
+          </span>
+        </button>
+        <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
+          <a href="index.html#about">About</a>
+          <a href="projects.html" aria-current="page">Work</a>
+          <a href="index.html#research">Research</a>
+          <a href="index.html#experience">Experience</a>
+          <a href="index.html#contact">Contact</a>
+          <a class="nav-cv" href="assets/Parand_Khalili_CV.pdf" target="_blank" rel="noopener noreferrer">View CV <span aria-hidden="true">↗</span>
+          </a>
+        </nav>
       </div>
-      <p class="projects-note">NOTE: Research work is marked as ongoing. Public repository links are provided where available; not every personal or course project has a public code link.</p>
-    </div>
-  </main>
-  <footer class="site-footer"><div class="wrap footer-inner"><span>© <span data-year>2026</span> PARAND KHALILI</span><span>DESIGNED TO STAY CURIOUS.</span><a href="index.html#contact">GET IN TOUCH ↗</a></div></footer>
-</body>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="page-hero wrap" aria-labelledby="projects-heading">
+        <a class="page-back" href="index.html">
+          <span aria-hidden="true">←</span> Back to home</a>
+        <div class="eyebrow">Project index / Research, applied work & systems</div>
+        <h1 id="projects-heading">Project index</h1>
+        <p>A closer look at my work in graph machine learning, analytics, and software — with public code where available and a clear distinction between projects and ongoing research.</p>
+      </section>
+      <div class="wrap">
+        <div class="filter-bar" role="group" aria-label="Filter projects by discipline" data-project-filters hidden>
+          <span class="filter-label">Browse by discipline</span>
+          <button class="filter-button" type="button" data-filter="all" aria-pressed="true" aria-controls="project-grid">All projects</button>
+          <button class="filter-button" type="button" data-filter="ml" aria-pressed="false" aria-controls="project-grid">AI & ML</button>
+          <button class="filter-button" type="button" data-filter="data" aria-pressed="false" aria-controls="project-grid">Data & BI</button>
+          <button class="filter-button" type="button" data-filter="systems" aria-pressed="false" aria-controls="project-grid">Systems & Software</button>
+        </div>
+        <p class="project-count" role="status" aria-live="polite" aria-atomic="true" data-project-count>10 projects / All projects</p>
+        <div class="project-grid archive-grid" id="project-grid">
+          <article class="project-card thesis-card" id="thesis" data-category="ml">
+            <figure class="project-figure thesis-figure">
+              <a class="evidence-image" href="assets/thesis-pipeline.svg" target="_blank" rel="noopener noreferrer" aria-label="Open illustrative thesis workflow at full resolution">
+                <img src="assets/thesis-pipeline.svg" width="1120" height="380" alt="Illustrative thesis workflow: graph, active node selection, structure-aware LLM prompt, annotations, confidence filtering, and GNN classification." loading="lazy">
+              </a>
+              <figcaption>Illustrative methodology · ongoing thesis, not experimental output.</figcaption>
+            </figure>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>01 / Undergraduate thesis</span>
+                <span class="status">2026 · Ongoing</span>
+              </div>
+              <h2>Structure-Aware LLM-Based Graph Node Labeling</h2>
+              <p>Developing a label-efficient framework for node classification on text-attributed graphs. Current directions include structure-aware prompting with graph neighborhoods and random walks, active node selection, and confidence-based filtering of LLM-generated annotations.</p>
+              <ul class="tag-list" aria-label="Thesis technologies">
+                <li>Python</li>
+                <li>PyTorch</li>
+                <li>PyTorch Geometric</li>
+                <li>LLMs / GNNs</li>
+              </ul>
+              <a class="project-link" href="index.html#research">Read the research overview <span class="arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+          <article class="project-card" id="credit-scoring" data-category="ml data">
+            <figure class="project-figure pastel-blue">
+              <a class="evidence-image" href="assets/projects/credit-roc.webp" target="_blank" rel="noopener noreferrer" aria-label="Open baseline credit-scoring model roc curves at full resolution">
+                <img src="assets/projects/credit-roc.webp" width="695" height="550" alt="Baseline credit-scoring model ROC curves" loading="lazy" decoding="async">
+              </a>
+              <figcaption>Baseline-model ROC comparison. <a href="https://github.com/Parand1khalili/credit-scoring-risk-mitigation/blob/main/docs/report.pdf" target="_blank" rel="noopener noreferrer">Report · p. 8 ↗</a>
+              </figcaption>
+            </figure>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>Credit risk analytics</span>
+                <span>2026</span>
+              </div>
+              <h2>Credit Scoring & Loan Default Risk Mitigation</h2>
+              <p>A prediction pipeline with target encoding, financial feature engineering, and a tuned Random Forest. Cost-sensitive evaluation and risk bands connect model predictions to lending decisions.</p>
+              <p>The project reports 87.41% accuracy, 79.21% balanced accuracy, and a 4.65 lift in the top decile. Evaluation details are available in the repository.</p>
+              <details class="artifact-details">
+                <summary>More evaluation figures</summary>
+                <figure>
+                  <a href="assets/projects/credit-pr.webp" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/projects/credit-pr.webp" width="695" height="550" loading="lazy" alt="Baseline-model precision–recall curves from the credit-scoring report.">
+                  </a>
+                  <figcaption>Precision–recall comparison · report, page 8.</figcaption>
+                </figure>
+                <figure>
+                  <a href="assets/projects/credit-feature-importance.webp" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/projects/credit-feature-importance.webp" width="984" height="784" loading="lazy" alt="Random Forest feature importance from the credit-scoring report.">
+                  </a>
+                  <figcaption>Feature importance · report, page 10.</figcaption>
+                </figure>
+              </details>
+              <ul class="tag-list" aria-label="Credit scoring technologies">
+                <li>Python</li>
+                <li>scikit-learn</li>
+                <li>Random Forest</li>
+              </ul>
+              <a class="project-link" href="https://github.com/Parand1khalili/credit-scoring-risk-mitigation" target="_blank" rel="noopener noreferrer" aria-label="View repository: Credit Scoring on GitHub">View repository <span class="arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+          <article class="project-card" id="mytorch" data-category="ml">
+            <figure class="project-figure pastel-lilac">
+              <a class="evidence-image" href="assets/projects/mytorch-accuracy.webp" target="_blank" rel="noopener noreferrer" aria-label="Open mytorch training and testing accuracy plot on wdbc data at full resolution">
+                <img src="assets/projects/mytorch-accuracy.webp" width="571" height="455" alt="MyTorch training and testing accuracy plot on WDBC data" loading="lazy" decoding="async">
+              </a>
+              <figcaption>Saved notebook output on WDBC data. <a href="https://github.com/Parand1khalili/MLP-Classifier-MyTorch-Framework/blob/main/task2.ipynb" target="_blank" rel="noopener noreferrer">Notebook ↗</a>
+              </figcaption>
+            </figure>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>Neural networks</span>
+                <span>2025</span>
+              </div>
+              <h2>MyTorch Framework & MLP Classifier</h2>
+              <p>A custom neural network library built from core components: tensors, linear layers, activation functions, losses, backpropagation, and SGD. The repository also includes a PyTorch MLP classifier for the Wisconsin breast cancer dataset.</p>
+              <ul class="tag-list" aria-label="MyTorch technologies">
+                <li>Python</li>
+                <li>NumPy</li>
+                <li>PyTorch</li>
+                <li>Linear algebra</li>
+              </ul>
+              <a class="project-link" href="https://github.com/Parand1khalili/MLP-Classifier-MyTorch-Framework" target="_blank" rel="noopener noreferrer" aria-label="View repository: MyTorch on GitHub">View repository <span class="arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+          <article class="project-card" id="fundamentals-ai" data-category="ml">
+            <figure class="project-figure pastel-blue">
+              <a class="evidence-image" href="assets/projects/sokoban.webp" target="_blank" rel="noopener noreferrer" aria-label="Open sokoban solver interface from the fundamentals of ai project at full resolution">
+                <img src="assets/projects/sokoban.webp" width="687" height="648" alt="Sokoban solver interface from the Fundamentals of AI project" loading="lazy" decoding="async">
+              </a>
+              <figcaption>Sokoban interface captured in the repository. <a href="https://github.com/Parand1khalili/Fundamentals-of-AI/blob/main/01-Sokoban-AI-Solver/screenshot.png" target="_blank" rel="noopener noreferrer">Source screenshot ↗</a>
+              </figcaption>
+            </figure>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>Artificial intelligence</span>
+                <span>2025 · Coursework</span>
+              </div>
+              <h2>Fundamentals of Artificial Intelligence</h2>
+              <p>AI implementations spanning Sokoban search with A*, crossword constraint satisfaction with AC-3, and Isolation agents using Minimax and Alpha-Beta pruning. Includes Q-learning and Bayesian inference with sampling methods.</p>
+              <details class="artifact-details">
+                <summary>Learning curve & game visualization</summary>
+                <figure>
+                  <a href="assets/projects/lunarlander-learning.webp" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/projects/lunarlander-learning.webp" width="1152" height="670" loading="lazy" alt="LunarLander learning curve saved in the Fundamentals of AI repository.">
+                  </a>
+                  <figcaption>Original LunarLander learning curve · <a href="https://github.com/Parand1khalili/Fundamentals-of-AI/blob/main/04-RL-LunarLander/learning_curve.png" target="_blank" rel="noopener noreferrer">source ↗</a>.</figcaption>
+                </figure>
+                <figure>
+                  <a href="https://github.com/Parand1khalili/Fundamentals-of-AI/blob/main/03-Isolation-Game-Agent/viz.gif" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/projects/isolation-state.webp" width="480" height="318" loading="lazy" alt="An Isolation board state from the repository's saved game animation.">
+                  </a>
+                  <figcaption>Frame from the recorded Isolation game; open the original animation ↗.</figcaption>
+                </figure>
+              </details>
+              <ul class="tag-list" aria-label="Fundamentals of AI technologies">
+                <li>Python</li>
+                <li>NumPy</li>
+                <li>CSP</li>
+                <li>Reinforcement learning</li>
+              </ul>
+              <a class="project-link" href="https://github.com/Parand1khalili/Fundamentals-of-AI" target="_blank" rel="noopener noreferrer" aria-label="View repository: Fundamentals of Artificial Intelligence on GitHub">View repository <span class="arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+          <article class="project-card" id="hr-analytics" data-category="data">
+            <figure class="project-figure pastel-butter">
+              <a class="evidence-image" href="assets/projects/hr-report-excerpt.webp" target="_blank" rel="noopener noreferrer" aria-label="Open hr project report analysis excerpt in persian at full resolution">
+                <img src="assets/projects/hr-report-excerpt.webp" width="934" height="710" alt="HR project report analysis excerpt in Persian" loading="lazy" decoding="async">
+              </a>
+              <figcaption>Actual report excerpt (Persian); not a dashboard screenshot. <a href="https://github.com/Parand1khalili/PowerBI_HR_Analysis/blob/main/PowerBI_Project_Report.pdf" target="_blank" rel="noopener noreferrer">Report · p. 7 ↗</a>
+              </figcaption>
+            </figure>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>HR analytics</span>
+                <span>2025</span>
+              </div>
+              <h2>HR Analytics / Power BI</h2>
+              <p>A Power BI dashboard exploring employee attrition, salary distributions, and hiring trends. Data cleaning and transformation support views by department, city, demographic group, and joining year.</p>
+              <ul class="tag-list" aria-label="HR Analytics technologies">
+                <li>Power BI</li>
+                <li>Python</li>
+                <li>Data preparation</li>
+                <li>Visualization</li>
+              </ul>
+              <a class="project-link" href="https://github.com/Parand1khalili/PowerBI_HR_Analysis" target="_blank" rel="noopener noreferrer" aria-label="View repository: HR Analytics on GitHub">View repository <span class="arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+          <article class="project-card" id="tetris" data-category="ml">
+            <div class="project-art art-tetris" aria-hidden="true">
+              <span class="figure-label">06 / EVOLUTIONARY ALGORITHMS</span>
+              <span class="art-symbol">Evolutionary game AI</span>
+              <span class="art-rule">
+              </span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>Game AI</span>
+                <span>2025</span>
+              </div>
+              <h2>Tetris AI via Genetic Algorithms</h2>
+              <p>An autonomous Tetris agent using selection, crossover, and mutation. A board-evaluation fitness function guides the search, with visualization of the training process.</p>
+              <ul class="tag-list" aria-label="Tetris AI technologies">
+                <li>Python</li>
+                <li>Pygame</li>
+                <li>Genetic algorithms</li>
+              </ul>
+              <div class="project-status-note">Project documented in my CV. Public code is currently unavailable.</div>
+            </div>
+          </article>
+          <article class="project-card" id="xv6" data-category="systems">
+            <div class="project-art art-systems" aria-hidden="true">
+              <span class="figure-label">07 / OPERATING SYSTEMS</span>
+              <span class="art-code">user → syscall → kernel</span>
+              <span class="art-rule">
+              </span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>Systems programming</span>
+                <span>2025</span>
+              </div>
+              <h2>xv6 Operating System Enhancements</h2>
+              <p>Custom system calls and multithreading capabilities for the xv6 kernel, working with memory management and process scheduling in a C-based Linux and Docker environment.</p>
+              <ul class="tag-list" aria-label="xv6 technologies">
+                <li>C</li>
+                <li>Linux</li>
+                <li>Shell scripting</li>
+                <li>Docker</li>
+              </ul>
+              <a class="project-link" href="https://github.com/Parand1khalili/xv6_syscall" target="_blank" rel="noopener noreferrer" aria-label="View repository: xv6 on GitHub">View repository <span class="arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+          <article class="project-card" id="english-app" data-category="systems">
+            <div class="project-art art-systems" aria-hidden="true">
+              <span class="figure-label">08 / SOFTWARE ENGINEERING</span>
+              <span class="art-symbol">English learning application</span>
+              <span class="art-rule">
+              </span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>Web application</span>
+                <span>Course project</span>
+              </div>
+              <h2>English Learning Web App</h2>
+              <p>A collaborative software engineering project for an English learning website. Its Django codebase organizes application features across modules and includes registration and learning views.</p>
+              <ul class="tag-list" aria-label="English Learning technologies">
+                <li>Python</li>
+                <li>Django</li>
+                <li>Web development</li>
+              </ul>
+              <a class="project-link" href="https://github.com/Parand1khalili/Software-Engineering-1403-01_G1" target="_blank" rel="noopener noreferrer" aria-label="View repository: English Learning Web App on GitHub">View repository <span class="arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+          <article class="project-card" id="twitjava" data-category="systems">
+            <div class="project-art art-systems" aria-hidden="true">
+              <span class="figure-label">09 / APPLICATION DEVELOPMENT</span>
+              <span class="art-code">User → Tweet → Timeline</span>
+              <span class="art-rule">
+              </span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>Desktop application</span>
+                <span>Software project</span>
+              </div>
+              <h2>TwitJava / Social Platform Simulation</h2>
+              <p>A Java-based social platform simulation with a JavaFX interface. The codebase includes sign-in and registration, user profiles, tweets, a timeline, and follower views.</p>
+              <ul class="tag-list" aria-label="TwitJava technologies">
+                <li>Java</li>
+                <li>JavaFX</li>
+                <li>Application design</li>
+              </ul>
+              <a class="project-link" href="https://github.com/Parand1khalili/twitterFinal" target="_blank" rel="noopener noreferrer" aria-label="View repository: TwitJava on GitHub">View repository <span class="arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+          <article class="project-card" id="hipka" data-category="systems">
+            <div class="project-art art-systems" aria-hidden="true">
+              <span class="figure-label">10 / MOBILE DEVELOPMENT</span>
+              <span class="art-symbol">Android music application</span>
+              <span class="art-rule">
+              </span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>Android application</span>
+                <span>Software project</span>
+              </div>
+              <h2>Hipka Music</h2>
+              <p>An Android music application with a Kotlin codebase, including playback, playlists, local data storage, and a layered repository architecture.</p>
+              <ul class="tag-list" aria-label="Hipka Music technologies">
+                <li>Kotlin</li>
+                <li>Android</li>
+                <li>Gradle</li>
+              </ul>
+              <a class="project-link" href="https://github.com/Parand1khalili/Hipka_Music" target="_blank" rel="noopener noreferrer" aria-label="View repository: Hipka Music on GitHub">View repository <span class="arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+        </div>
+        <p class="archive-note">The thesis is ongoing research. Project descriptions reflect my CV and public repositories; public code links are included where verified.</p>
+      </div>
+      <section class="section contact-section" aria-labelledby="project-contact-heading">
+        <div class="wrap contact-layout">
+          <div>
+            <h2 id="project-contact-heading">Discuss a project</h2>
+            <p>Let's talk about research, data, or the next thing to build.</p>
+          </div>
+          <div>
+            <a class="contact-email" href="mailto:parandkhalili@aut.ac.ir">parandkhalili@aut.ac.ir <span class="arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="text-link" href="index.html#contact">All contact links <span class="arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <span>© <span data-year>2026</span> Parand Khalili</span>
+        <a class="asset-credits" href="assets/SOURCES.md">Asset sources & credits</a>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://parand1khalili.github.io/sitemap.xml

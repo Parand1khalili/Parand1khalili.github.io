@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 380" fill="none">
+  <title>Illustrative workflow for the ongoing graph node labeling thesis</title>
+  <desc>Text-attributed graph to active node selection, structure-aware LLM prompts, generated annotations, confidence filtering, and GNN node classification. A methodology illustration, not a result.</desc>
+  <rect width="1120" height="380" rx="8" fill="#FAF9F3"/>
+  <g font-family="Segoe UI,Arial,sans-serif" fill="#252525">
+    <text x="35" y="40" font-size="15" font-weight="600">ONGOING THESIS / ILLUSTRATIVE WORKFLOW</text>
+    <text x="35" y="66" font-size="13" fill="#60605A">Based on the research directions documented in the CV. No experimental results are shown.</text>
+  </g>
+  <g stroke="#848478" stroke-width="2">
+    <path d="M203 165H241M381 165H419M559 165H597M737 165H775M915 165H953"/>
+    <path d="m235 160 6 5-6 5m178-10 6 5-6 5m178-10 6 5-6 5m178-10 6 5-6 5m178-10 6 5-6 5"/>
+  </g>
+  <g stroke="#D9D9CF">
+    <rect x="35" y="105" width="168" height="120" rx="5" fill="#DCEBFA"/>
+    <rect x="241" y="105" width="140" height="120" rx="5" fill="#F3F5A1"/>
+    <rect x="419" y="105" width="140" height="120" rx="5" fill="#FFE5A3"/>
+    <rect x="597" y="105" width="140" height="120" rx="5" fill="#E9DFF5"/>
+    <rect x="775" y="105" width="140" height="120" rx="5" fill="#F3F5A1"/>
+    <rect x="953" y="105" width="132" height="120" rx="5" fill="#DCEBFA"/>
+  </g>
+  <g font-family="Segoe UI,Arial,sans-serif" fill="#252525" font-size="16" text-anchor="middle">
+    <text x="119" y="154">Text-attributed</text><text x="119" y="179">graph</text>
+    <text x="311" y="154">Active node</text><text x="311" y="179">selection</text>
+    <text x="489" y="154">Structure-aware</text><text x="489" y="179">LLM prompt</text>
+    <text x="667" y="154">Generated</text><text x="667" y="179">annotations</text>
+    <text x="845" y="154">Confidence</text><text x="845" y="179">filtering</text>
+    <text x="1019" y="154">GNN node</text><text x="1019" y="179">classification</text>
+  </g>
+  <g font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#60605A">
+    <text x="35" y="278">PROMPT CONTEXT</text>
+    <text x="35" y="307">1-hop / 2-hop neighbors and random walks</text>
+    <text x="597" y="278">RESEARCH QUESTION</text>
+    <text x="597" y="307">How can graph structure support label-efficient learning?</text>
+  </g>
+</svg>
