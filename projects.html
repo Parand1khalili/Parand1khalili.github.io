@@ -1,84 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Projects - Parand Khalili</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f6f5f0">
+  <meta name="description" content="Selected research, machine learning, data analytics, systems, and software projects by Parand Khalili.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"><script defer src="script.js"></script><title>Projects — Parand Khalili</title>
 </head>
-<body>
-  <header>
-    <div class="title">Parand Khalili</div>
-    <nav>
-      <a href="index.html">about</a>
-      <a href="projects.html" class="active">projects</a>
-      <a href="resume.html">cv</a>
-    </nav>
+<body data-page="projects">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top"><div class="header-inner wrap">
+    <a class="wordmark" href="index.html" aria-label="Parand Khalili — home"><span class="wordmark-symbol">p<span>·</span>k</span><span class="wordmark-full">PARAND<br>KHALILI</span></a>
+    <nav class="desktop-nav" aria-label="Primary navigation"><a href="index.html#about">ABOUT <span>01</span></a><a class="is-active" href="projects.html">WORK <span>02</span></a><a href="index.html#experience">EXPERIENCE <span>03</span></a><a href="index.html#contact">CONTACT <span>04</span></a></nav>
+    <a class="header-action" href="assets/Parand_Khalili_CV.pdf" target="_blank" rel="noopener">VIEW CV <span aria-hidden="true">↗</span></a><button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button></div>
+    <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation" hidden><a href="index.html#about">About</a><a href="projects.html">Work</a><a href="index.html#experience">Experience</a><a href="index.html#contact">Contact</a><a href="assets/Parand_Khalili_CV.pdf" target="_blank">View CV ↗</a></nav>
   </header>
-
-  <main>
-    <div class="container">
-      <div class="sidebar">
-        <img src="images/profile.jpg" alt="Profile Photo" />
-        <br> 
-        <p>Parand Khalili</p>
-        <p>BC student in CE, AUT</p>
-        <a href="https://www.linkedin.com/in/parand-khalili-4428552b6" target="_blank"> <i class="fab fa-linkedin"></i> linkedin </a>
-        <a href="https://github.com/Parand1khalili" target="_blank"> <i class="fab fa-github"></i> github</a>
-        <a href="mailto:parandkhalili@gmail.com"> <i class="fas fa-envelope"></i> email</a>
+  <main id="main">
+    <section class="page-hero wrap"><a class="page-back" href="index.html"><span aria-hidden="true">←</span> BACK TO HOME</a><div class="section-label"><span class="section-index">[ INDEX ]</span> EXPERIMENTS / APPLIED WORK / SYSTEMS</div><h1>Selected <em>work.</em></h1><p>A living collection of ideas, investigations, and engineering projects — from graph machine learning and data analytics to low-level systems.</p></section>
+    <div class="wrap"><div class="filter-bar" aria-label="Filter projects by area"><span class="filter-label">BROWSE BY DISCIPLINE:</span><button type="button" class="filter-button active" data-filter="all" aria-pressed="true">ALL PROJECTS</button><button type="button" class="filter-button" data-filter="ml" aria-pressed="false">AI / ML</button><button type="button" class="filter-button" data-filter="data" aria-pressed="false">DATA & BI</button><button type="button" class="filter-button" data-filter="systems" aria-pressed="false">SYSTEMS / SOFTWARE</button></div>
+      <div class="projects-grid">
+        <article class="project-tile reveal" data-category="ml"><div class="project-top"><span>01 / RESEARCH · ONGOING</span><span>2026—</span></div><h2>Structure-Aware LLMs for Graph Node Labeling</h2><p>Undergraduate thesis studying label-efficient node classification, structure-aware LLM prompts using 1-hop/2-hop neighbors and random walks, and training graph neural networks on the resulting annotations. Research in progress.</p><div class="tag-row"><span>LLMs</span><span>Graph ML</span><span>PyG</span><span>Active Learning</span></div></article>
+        <article class="project-tile reveal" data-category="ml data"><div class="project-top"><span>02 / APPLIED ML</span><span>2026</span></div><h2>Credit Scoring & Loan Default Prediction</h2><p>End-to-end risk prediction pipeline featuring cost-sensitive decision making, a tuned Random Forest model, and risk segmentation. Reported performance: 87.41% accuracy, 79.21% balanced accuracy, and 4.65 lift at the top decile.</p><div class="tag-row"><span>Python</span><span>Scikit-learn</span><span>Random Forest</span></div><span class="tile-external" aria-hidden="true">↗</span><a class="tile-link" href="https://github.com/Parand1khalili/credit-scoring-risk-mitigation" target="_blank" rel="noopener noreferrer" aria-label="Credit Scoring project on GitHub"></a></article>
+        <article class="project-tile reveal" data-category="data"><div class="project-top"><span>03 / BUSINESS INTELLIGENCE</span><span>2025</span></div><h2>HR Analytics Dashboard</h2><p>Data modeling, transformation, and visual analysis of hiring patterns, employee attrition, and salary distributions through an interactive Power BI dashboard.</p><div class="tag-row"><span>Power BI</span><span>Python</span><span>DAX</span><span>Data Visualization</span></div><span class="tile-external" aria-hidden="true">↗</span><a class="tile-link" href="https://github.com/Parand1khalili/PowerBI_HR_Analysis" target="_blank" rel="noopener noreferrer" aria-label="HR Analytics project on GitHub"></a></article>
+        <article class="project-tile reveal" data-category="ml"><div class="project-top"><span>04 / DEEP LEARNING</span><span>2025</span></div><h2>MyTorch & MLP Classifier</h2><p>A custom neural network library exploring tensors, layers, activation functions, losses, and optimization, alongside a PyTorch MLP classifier on the Wisconsin breast cancer dataset.</p><div class="tag-row"><span>Python</span><span>NumPy</span><span>PyTorch</span><span>Neural Networks</span></div><span class="tile-external" aria-hidden="true">↗</span><a class="tile-link" href="https://github.com/Parand1khalili/MLP-Classifier-MyTorch-Framework" target="_blank" rel="noopener noreferrer" aria-label="MyTorch project on GitHub"></a></article>
+        <article class="project-tile reveal" data-category="ml"><div class="project-top"><span>05 / CLASSICAL & MODERN AI</span><span>2025</span></div><h2>Fundamentals of Artificial Intelligence</h2><p>A set of AI implementations: Sokoban search with A*, crossword constraint satisfaction, Minimax and Alpha-Beta game agents, Q-learning, and Bayesian inference.</p><div class="tag-row"><span>A*</span><span>CSP</span><span>Reinforcement Learning</span><span>Bayesian Networks</span></div><span class="tile-external" aria-hidden="true">↗</span><a class="tile-link" href="https://github.com/Parand1khalili/Fundamentals-of-AI" target="_blank" rel="noopener noreferrer" aria-label="Fundamentals of AI project on GitHub"></a></article>
+        <article class="project-tile reveal" data-category="ml"><div class="project-top"><span>06 / EVOLUTIONARY ALGORITHMS</span><span>2025</span></div><h2>Tetris AI via Genetic Algorithms</h2><p>An autonomous Tetris agent trained through evolutionary strategies: selection, crossover, and mutation, with a custom fitness function and visualized training behavior.</p><div class="tag-row"><span>Python</span><span>Pygame</span><span>Genetic Algorithms</span></div></article>
+        <article class="project-tile reveal" data-category="systems"><div class="project-top"><span>07 / OPERATING SYSTEMS</span><span>2025</span></div><h2>xv6 Kernel Enhancements</h2><p>Extended xv6 with custom system calls and multithreading features, working with process execution, memory management, and lower-level C development.</p><div class="tag-row"><span>C</span><span>OS</span><span>Linux</span><span>Docker</span></div><span class="tile-external" aria-hidden="true">↗</span><a class="tile-link" href="https://github.com/Parand1khalili/xv6_syscall" target="_blank" rel="noopener noreferrer" aria-label="xv6 project on GitHub"></a></article>
+        <article class="project-tile reveal" data-category="systems"><div class="project-top"><span>08 / BACKEND ENGINEERING</span><span>SOFTWARE</span></div><h2>English Learning Web App</h2><p>A picture-based English learning application with a Django backend and JavaScript frontend, created as a software engineering project.</p><div class="tag-row"><span>Django</span><span>JavaScript</span><span>Backend</span></div><span class="tile-external" aria-hidden="true">↗</span><a class="tile-link" href="https://github.com/Parand1khalili/Software-Engineering-1403-01_G1" target="_blank" rel="noopener noreferrer" aria-label="English Learning app project on GitHub"></a></article>
+        <article class="project-tile reveal" data-category="systems"><div class="project-top"><span>09 / APPLICATION DEVELOPMENT</span><span>SOFTWARE</span></div><h2>TwitJava — A Social Platform Simulation</h2><p>A JavaFX-based social platform simulation with authentication, posts, social interactions, and concurrency handling.</p><div class="tag-row"><span>Java</span><span>JavaFX</span><span>Concurrency</span></div><span class="tile-external" aria-hidden="true">↗</span><a class="tile-link" href="https://github.com/Parand1khalili/twitterFinal" target="_blank" rel="noopener noreferrer" aria-label="TwitJava project on GitHub"></a></article>
+        <article class="project-tile reveal" data-category="systems"><div class="project-top"><span>10 / MOBILE APP</span><span>SOFTWARE</span></div><h2>Hipka Music</h2><p>An Android music application project with a Kotlin-based codebase and Gradle build setup.</p><div class="tag-row"><span>Kotlin</span><span>Android</span><span>Mobile</span></div><span class="tile-external" aria-hidden="true">↗</span><a class="tile-link" href="https://github.com/Parand1khalili/Hipka_Music" target="_blank" rel="noopener noreferrer" aria-label="Hipka Music project on GitHub"></a></article>
       </div>
-
-      <div class="content">
-        <h1>Projects</h1>
-
-        <div class="project">
-          <h2>TwitJava</h2>
-          <p>JavaFX Twitter simulation with full functionality: registration, login, tweet, like, follow/unfollow, block, UI, and concurrency handling.</p>
-          <a href="https://github.com/Parand1khalili/twitterFinal" target="_blank">View on GitHub</a>
-        </div>
-
-        <div class="project">
-          <h2>xv6 System Calls</h2>
-          <p>Added custom system calls and multithreading features to xv6. Developed using C and Docker.</p>
-          <a href="https://github.com/Parand1khalili/xv6_syscall" target="_blank">View on GitHub</a>
-        </div>
-
-        <div class="project">
-          <h2>English Learning Microservice</h2>
-          <p>Developed backend in Django and frontend with JS for a picture-based English learning web app.</p>
-          <a href="https://github.com/Parand1khalili/Software-Engineering-1403-01_G1" target="_blank">View on GitHub</a>
-        </div>
-
-        <div class="project">
-          <h2>Banking System</h2>
-          <p>Python app with Tkinter UI and SQLite. Supports account operations and user management.</p>
-          <a href="https://github.com/Parand1khalili/python_projects" target="_blank">View on GitHub</a>
-        </div>
-
-        <div class="project">
-          <h2>Chatroom</h2>
-          <p>Multi-user chatroom with login, contact groups, MySQL DB, and private chats.</p>
-          <a href="https://github.com/Parand1khalili/chatroom" target="_blank">View on GitHub</a>
-        </div>
-
-        <div class="project">
-          <h2>2-Player Fighting Game (Verilog)</h2>
-          <p>FPGA-based game with jump, kick, movement, and 3 lives per player.</p>
-          <a href="https://github.com/Parand1khalili/FightGame" target="_blank">View on GitHub</a>
-        </div>
-
-        <div class="project">
-          <h2>Linear Solver</h2>
-          <p>Python tool for solving linear equations and determinant computation using recursive and Gaussian methods.</p>
-          <a href="https://github.com/Parand1khalili/LinearSolver" target="_blank">View on GitHub</a>
-        </div>
-
-      </div>
+      <p class="projects-note">NOTE: Research work is marked as ongoing. Public repository links are provided where available; not every personal or course project has a public code link.</p>
     </div>
   </main>
-
-  <footer>
-    <p>© 2025 Parand Khalili — <a href="mailto:parandkhalili@gmail.com">Contact me</a></p>
-  </footer>
+  <footer class="site-footer"><div class="wrap footer-inner"><span>© <span data-year>2026</span> PARAND KHALILI</span><span>DESIGNED TO STAY CURIOUS.</span><a href="index.html#contact">GET IN TOUCH ↗</a></div></footer>
 </body>
 </html>

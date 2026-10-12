@@ -1,62 +1,149 @@
-<!DOCTYPE html> 
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>About - Parand Khalili</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f0">
+  <meta name="description" content="Parand Khalili — Computer Engineering student at Amirkabir University of Technology, retail data analyst, and researcher working across graph machine learning, LLMs, and data-driven systems.">
+  <meta property="og:title" content="Parand Khalili — Data, AI & Systems">
+  <meta property="og:description" content="Exploring data, building intelligent systems, and making complex ideas useful.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://parand1khalili.github.io/">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Parand Khalili — Data, AI & Systems</title>
 </head>
-<body>
-  <header>
-    <div class="title">Parand Khalili</div>
-    <nav>
-        <a href="index.html" class="active">about</a>
-        <a href="projects.html">projects</a>
-        <a href="resume.html">cv</a>
-    </nav>      
-  </header>
-
-  <main>
-    <div class="container">
-      <div class="sidebar">
-        <img src="images/profile.jpg" alt="Profile Photo" />
-        <br> 
-        <p>Parand Khalili</p>
-        <p>BC student in CE, AUT</p>
-        <a href="https://www.linkedin.com/in/parand-khalili-4428552b6" target="_blank"> <i class="fab fa-linkedin"></i> linkedin </a>
-        <a href="https://github.com/Parand1khalili" target="_blank"> <i class="fab fa-github"></i> github</a>
-        <a href="mailto:parandkhalili@gmail.com"> <i class="fas fa-envelope"></i>  email</a>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-shell">
+    <header class="site-header" id="top">
+      <div class="header-inner wrap">
+        <a class="wordmark" href="index.html" aria-label="Parand Khalili — home"><span class="wordmark-symbol">p<span>·</span>k</span><span class="wordmark-full">PARAND<br>KHALILI</span></a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a class="is-active" href="#about">ABOUT <span>01</span></a>
+          <a href="#work">WORK <span>02</span></a>
+          <a href="#experience">EXPERIENCE <span>03</span></a>
+          <a href="#contact">CONTACT <span>04</span></a>
+        </nav>
+        <a class="header-action" href="assets/Parand_Khalili_CV.pdf" target="_blank" rel="noopener">VIEW CV <span aria-hidden="true">↗</span></a>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
       </div>
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation" hidden>
+        <a href="#about">About</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a><a href="assets/Parand_Khalili_CV.pdf" target="_blank">View CV ↗</a>
+      </nav>
+    </header>
 
-      <div class="content">
-          <h1>About Me</h1>
+    <main id="main">
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-main">
+          <div class="hero-eyebrow reveal"><span class="status-led" aria-hidden="true"></span> DATA ANALYST & AI RESEARCHER <span class="eyebrow-divider">/</span> TEHRAN, IRAN</div>
+          <h1 class="hero-title reveal" id="hero-title">Making sense<br>of <em>complexity</em><span class="hero-period">.</span></h1>
+          <div class="hero-bottom reveal">
+            <p>I'm <strong>Parand Khalili</strong> — a computer engineering student exploring the intersection of <strong>data, intelligent systems, and research.</strong> I turn questions into models, insights, and working software.</p>
+            <div class="hero-buttons"><a class="button button-dark" href="#work">EXPLORE MY WORK <span aria-hidden="true">↘</span></a><a class="text-link" href="#about">MORE ABOUT ME <span aria-hidden="true">↘</span></a></div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Decorative interactive visualization of connected graph nodes">
+          <div class="visual-grid"></div>
+          <canvas id="network-canvas" aria-hidden="true"></canvas>
+          <div class="orbit-mark orbit-mark-one" aria-hidden="true">01 / GRAPH</div>
+          <div class="orbit-mark orbit-mark-two" aria-hidden="true">DATA → INSIGHT</div>
+          <div class="central-ring"><div class="central-ring-inner"><span>PK<span class="central-star">✳</span></span></div></div>
+          <div class="visual-caption">EXPERIMENTAL THINKING<br>× PRACTICAL BUILDING</div>
+          <div class="visual-corner" aria-hidden="true">[ SIGNAL_001 ]</div>
+        </div>
+        <div class="hero-scroll-hint"><span>SCROLL TO EXPLORE</span><span aria-hidden="true">↓</span></div>
+      </section>
 
-          <p>
-          Hi! I'm Parand Khalili, an undergraduate computer engineering student at Amirkabir University of Technology with a deep interest in data, systems, and software design.
-          </p>
-          
-          <p>
-          Currently, I'm exploring the world of data analysis and machine learning. I'm taking online courses and practical projects to improve my skills and move toward my goal of becoming a data analyst. I'm also passionate about understanding how systems work—from operating systems and databases to scalable backend designs.
-          </p>
-          
-          <p>
-          Aside from tech, I truly enjoy music, reading books, and learning new things across different domains. Curiosity has always driven me—whether it’s debugging a piece of code or diving into a completely new field.
-          </p>
-          
-          <p>
-          I’ve had the chance to work on several meaningful projects, from building backend services in Django to simulating games in Verilog, and I’m currently serving as a Teaching Assistant in both technical and theoretical courses such as Advanced Programming, Applied Linear Algebra, and Software Engineering.
-          </p>
-          
-          <p>
-          You can find more about my work in the <a href="projects.html">Projects</a> section or contact me directly via <a href="mailto:parandkhalili@gmail.com">email</a>.
-          </p>
-          
-      </div>
-    </div>
-  </main>
+      <section class="signal-strip" aria-label="Selected facts">
+        <div class="wrap signal-grid">
+          <div><span class="signal-number">18.47<span class="signal-unit">/20</span></span><span class="signal-label">CURRENT B.SC. GPA</span></div>
+          <div><span class="signal-number">134<span class="signal-unit">/150K+</span></span><span class="signal-label">NATIONAL ENTRANCE EXAM RANK</span></div>
+          <div><span class="signal-number">2022<span class="signal-unit">—NOW</span></span><span class="signal-label">COMPUTER ENGINEERING · AUT</span></div>
+          <div class="strip-symbol" aria-hidden="true">✳</div>
+        </div>
+      </section>
 
-  <footer>
-    <p>© 2025 Parand Khalili — <a href="mailto:parandkhalili@gmail.com">Contact me</a></p>
-  </footer>
+      <section class="section about-section wrap" id="about" aria-labelledby="about-heading">
+        <div class="section-label"><span class="section-index">[ 01 ]</span> ABOUT / MY PERSPECTIVE</div>
+        <div class="about-layout">
+          <h2 class="section-statement reveal" id="about-heading">Curiosity in theory.<br><em>Clarity</em> in practice.</h2>
+          <div class="about-copy reveal">
+            <p>I'm pursuing a B.Sc. in Computer Engineering at <strong>Amirkabir University of Technology</strong>, with interests that connect data analytics, machine learning, and the systems that make them useful.</p>
+            <p>Alongside my studies, I work as a <strong>Retail Data Analyst at EMRC</strong>, turning real-world datasets into actionable reports and automating repetitive analytical workflows. My undergraduate research investigates how <strong>large language models and graph neural networks</strong> can work together for data-efficient node classification.</p>
+            <a class="underlined-link" href="assets/Parand_Khalili_CV.pdf" target="_blank" rel="noopener">DOWNLOAD MY CV <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="focus-row reveal" aria-label="Areas of focus">
+          <span class="focus-lead">CURRENTLY EXPLORING</span>
+          <div class="focus-list"><span>Graph Machine Learning</span><span>Large Language Models</span><span>Data Analytics</span><span>Explainable AI</span><span>Active Learning</span></div>
+        </div>
+      </section>
+
+      <section class="section work-section" id="work" aria-labelledby="work-heading">
+        <div class="wrap">
+          <div class="section-label"><span class="section-index">[ 02 ]</span> SELECTED WORK / RESEARCH & PROJECTS</div>
+          <div class="section-heading-row reveal"><h2 id="work-heading">Ideas in <em>action.</em></h2><p>A selection of research and projects that blend technical depth with real-world problems.</p></div>
+          <div class="featured-grid">
+            <article class="work-card work-card-large reveal">
+              <div class="work-graphic work-graphic-graph" aria-hidden="true"><div class="graphic-kicker">STRUCTURE / LANGUAGE / LEARNING</div><svg viewBox="0 0 640 340" role="presentation"><g stroke="currentColor" stroke-width="1.4" opacity=".55"><path d="M90 160 195 85 305 140 413 65 530 140 455 260 335 225 205 265 90 160M195 85 205 265M305 140 335 225M413 65 455 260M530 140 335 225M305 140 205 265" fill="none"/><path d="M90 160 305 140M195 85 413 65" stroke-dasharray="4 8"/></g><g fill="currentColor"><circle cx="90" cy="160" r="11"/><circle cx="195" cy="85" r="11"/><circle cx="413" cy="65" r="11"/><circle cx="455" cy="260" r="11"/><circle cx="205" cy="265" r="11"/><circle cx="530" cy="140" r="11"/></g><g fill="#c5fb65"><circle cx="305" cy="140" r="23"/><circle cx="335" cy="225" r="17"/></g><circle cx="305" cy="140" r="36" stroke="#c5fb65" stroke-dasharray="4 5" fill="none"/><text x="42" y="315" font-size="13" fill="currentColor" font-family="monospace">G = (V, E)</text><text x="458" y="310" font-size="13" fill="currentColor" font-family="monospace">LLM ↔ GNN</text></svg><span class="graphic-bottom-note">ACTIVE SELECTION → STRUCTURE-AWARE ANNOTATION → GNN</span></div>
+              <div class="work-meta"><span>01 / UNDERGRADUATE RESEARCH</span><span>2026 — ONGOING</span></div>
+              <div class="work-title-line"><h3>Teaching graphs to<br>work with language.</h3><span class="work-arrow" aria-hidden="true">↗</span></div>
+              <p>Developing a label-efficient node classification framework combining LLM-generated annotations and graph neural networks, with a focus on structure-aware prompting and active learning.</p>
+              <div class="tag-row"><span>LLMs</span><span>GNNs</span><span>PyTorch Geometric</span><span>Research in progress</span></div>
+            </article>
+            <article class="work-card reveal">
+              <div class="work-graphic work-graphic-risk" aria-hidden="true"><div class="graphic-kicker">RISK INTELLIGENCE / MODEL EVALUATION</div><div class="metric-main"><span>87.41<span>%</span></span><small>MODEL ACCURACY</small></div><div class="risk-bars"><i style="height:40%"></i><i style="height:57%"></i><i style="height:42%"></i><i style="height:77%"></i><i style="height:64%"></i><i style="height:89%"></i><i style="height:71%"></i><i style="height:100%"></i></div><div class="metric-side">LIFT @ 10% <strong>4.65×</strong></div></div>
+              <div class="work-meta"><span>02 / APPLIED ML</span><span>2026</span></div>
+              <h3>Credit risk,<br>quantified.</h3>
+              <p>A cost-aware machine learning pipeline for loan default prediction, with feature engineering, tuned Random Forest models, and actionable risk bands.</p>
+              <div class="tag-row"><span>Python</span><span>Scikit-learn</span><span>Risk Analytics</span></div>
+              <a class="card-full-link" href="https://github.com/Parand1khalili/credit-scoring-risk-mitigation" target="_blank" rel="noopener noreferrer" aria-label="See Credit Scoring project on GitHub"></a>
+            </article>
+            <article class="work-card reveal">
+              <div class="work-graphic work-graphic-dash" aria-hidden="true"><div class="graphic-kicker">BUSINESS INTELLIGENCE / HUMAN RESOURCES</div><div class="mock-dash"><div class="dash-micro"><span>PEOPLE ANALYTICS</span><span>● LIVE VIEW</span></div><div class="dash-number">4,653<small>EMPLOYEES IN DATASET</small></div><div class="dash-graph"><span style="height:44%"></span><span style="height:75%"></span><span style="height:54%"></span><span style="height:93%"></span><span style="height:68%"></span><span style="height:79%"></span><span style="height:52%"></span><span style="height:96%"></span><span style="height:73%"></span></div><div class="dash-footer">ATTRITION <b>34%</b><span>DEPARTMENT / CITY / YEAR</span></div></div></div>
+              <div class="work-meta"><span>03 / DATA VISUALIZATION</span><span>2025</span></div>
+              <h3>Insights you<br>can see.</h3>
+              <p>A Power BI dashboard exploring employee attrition, compensation, and hiring patterns to support data-driven HR decisions.</p>
+              <div class="tag-row"><span>Power BI</span><span>DAX</span><span>Python</span></div>
+              <a class="card-full-link" href="https://github.com/Parand1khalili/PowerBI_HR_Analysis" target="_blank" rel="noopener noreferrer" aria-label="See HR Analytics Dashboard on GitHub"></a>
+            </article>
+          </div>
+          <div class="all-work-link reveal"><a href="projects.html">EXPLORE ALL PROJECTS <span aria-hidden="true">↗</span></a><span>INCLUDING AI, SYSTEMS & SOFTWARE</span></div>
+        </div>
+      </section>
+
+      <section class="section experience-section wrap" id="experience" aria-labelledby="experience-heading">
+        <div class="section-label"><span class="section-index">[ 03 ]</span> EXPERIENCE / WHERE I APPLY IT</div>
+        <div class="experience-layout">
+          <div class="experience-heading reveal"><h2 id="experience-heading">From the lab<br>to the <em>real world.</em></h2><p>Research-minded analysis, practical software, and a bias toward measurable outcomes.</p></div>
+          <div class="timeline">
+            <article class="timeline-entry reveal"><div class="timeline-date">JUL 2026 — PRESENT</div><div><h3>Retail Data Analyst</h3><p class="role-company">EMRC</p><p>Analyzing retail datasets and delivering client-facing insights; building Python-based workflow automations and a configurable report-generation pipeline.</p></div><span class="timeline-indicator" aria-hidden="true">01</span></article>
+            <article class="timeline-entry reveal"><div class="timeline-date">SUMMER 2025</div><div><h3>Data Analysis & BI Intern</h3><p class="role-company">YAS Arghavani System Engineering · Bank Mellat IT Holding</p><p>Built Power BI dashboards for POS operations and maintenance; modeled transaction data with Power Query and DAX to surface performance and revenue KPIs.</p></div><span class="timeline-indicator" aria-hidden="true">02</span></article>
+            <article class="timeline-entry reveal"><div class="timeline-date">2024 — 2026</div><div><h3>Teaching & Mentorship</h3><p class="role-company">Amirkabir University of Technology</p><p>Head Teaching Assistant for Business Intelligence, and TA roles including Data Mining, Software Engineering, Linear Algebra, Computer Architecture, and Advanced Programming.</p></div><span class="timeline-indicator" aria-hidden="true">03</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section capabilities-section" aria-labelledby="cap-heading">
+        <div class="wrap">
+          <div class="section-label section-label-light"><span class="section-index">[ 04 ]</span> TOOLKIT / THINKING & MAKING</div>
+          <div class="cap-layout"><h2 class="reveal" id="cap-heading">A few tools.<br><em>Many questions.</em></h2><div class="cap-groups reveal"><div><h3>01 / MACHINE LEARNING</h3><p>PyTorch · PyTorch Geometric · scikit-learn · GNNs · LLM integration · Active Learning</p></div><div><h3>02 / DATA & BI</h3><p>Python · Pandas · NumPy · Power BI · DAX · Power Query · SQL</p></div><div><h3>03 / ENGINEERING</h3><p>C · C++ · Java · Git · Linux · Docker · Software Design</p></div></div></div>
+        </div>
+        <div class="marquee" aria-hidden="true"><div>RESEARCH <span>✳</span> DATA <span>✳</span> ENGINEERING <span>✳</span> RESEARCH <span>✳</span> DATA <span>✳</span> ENGINEERING <span>✳</span></div></div>
+      </section>
+
+      <section class="section contact-section wrap" id="contact" aria-labelledby="contact-heading">
+        <div class="section-label"><span class="section-index">[ 05 ]</span> CONTACT / KEEP IN TOUCH</div>
+        <div class="contact-main reveal"><span class="contact-kicker">HAVE SOMETHING INTERESTING IN MIND?</span><h2 id="contact-heading">Let's make it<br><em>happen.</em> <span aria-hidden="true">↗</span></h2><a class="contact-email" href="mailto:parandkhalili@aut.ac.ir">parandkhalili@aut.ac.ir <span aria-hidden="true">↗</span></a></div>
+        <div class="contact-links"><a href="https://www.linkedin.com/in/parand-khalili-4428552b6" target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a><a href="https://github.com/Parand1khalili" target="_blank" rel="noopener noreferrer">GITHUB ↗</a><a href="assets/Parand_Khalili_CV.pdf" target="_blank" rel="noopener">CURRICULUM VITAE ↗</a></div>
+      </section>
+    </main>
+    <footer class="site-footer"><div class="wrap footer-inner"><span>© <span data-year>2026</span> PARAND KHALILI</span><span>DESIGNED TO STAY CURIOUS.</span><a href="#top">BACK TO TOP ↑</a></div></footer>
+  </div>
 </body>
 </html>
