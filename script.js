@@ -11,6 +11,48 @@
   const navigation = document.getElementById('site-navigation');
   const mobileViewport = window.matchMedia('(max-width: 800px)');
 
+  // Hysteresis prevents repeated mode switches near the top; fixed header avoids layout jumps.
+  if (header) {
+    let scrollFrame = 0;
+    let glassMode = window.scrollY >= 72;
+    const syncHeader = () => {
+      const y = Math.max(0, window.scrollY);
+      if (!glassMode && y >= 72) glassMode = true;
+      else if (glassMode && y <= 24) glassMode = false;
+      header.classList.toggle('is-scrolled', glassMode);
+      scrollFrame = 0;
+    };
+    window.addEventListener('scroll', () => {
+      if (!scrollFrame) scrollFrame = requestAnimationFrame(syncHeader);
+    }, { passive: true });
+    window.addEventListener('pageshow', syncHeader);
+    syncHeader();
+  }
+
+  // A static viewport dot grid; only a soft highlight around a fine pointer changes.
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    const root = document.documentElement;
+    let pointerFrame = 0;
+    let pointX = -400;
+    let pointY = -400;
+    window.addEventListener('pointermove', (event) => {
+      if (event.pointerType !== 'mouse' && event.pointerType !== 'pen') return;
+      pointX = event.clientX;
+      pointY = event.clientY;
+      if (!pointerFrame) {
+        pointerFrame = requestAnimationFrame(() => {
+          root.style.setProperty('--dot-x', pointX + 'px');
+          root.style.setProperty('--dot-y', pointY + 'px');
+          root.classList.add('has-pointer');
+          pointerFrame = 0;
+        });
+      }
+    }, { passive: true });
+    const hideHighlight = () => root.classList.remove('has-pointer');
+    root.addEventListener('pointerleave', hideHighlight);
+    window.addEventListener('blur', hideHighlight);
+  }
+
   if (header && toggle && navigation) {
     header.classList.add('nav-enhanced');
     toggle.hidden = false;
@@ -57,6 +99,141 @@
 
     mobileViewport.addEventListener('change', syncNavigation);
     syncNavigation();
+  }
+
+  // Real areas of work; the first title remains readable without JavaScript.
+  const rotatingRole = document.querySelector('[data-rotating-role]');
+  if (rotatingRole) {
+    const roles = ['Graph ML Researcher', 'Exploring LLM Limitations', 'Data Insights Analyst', 'BI Solutions Developer'];
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let timer;
+    let roleIndex = 0;
+    let length = roles[0].length;
+    let deleting = true;
+
+    function tickRole() {
+      if (document.hidden || reducedMotion.matches) return;
+      if (deleting) {
+        length = Math.max(0, length - 1);
+        rotatingRole.textContent = roles[roleIndex].slice(0, length);
+        if (length === 0) {
+          roleIndex = (roleIndex + 1) % roles.length;
+          deleting = false;
+          timer = window.setTimeout(tickRole, 320);
+          return;
+        }
+        timer = window.setTimeout(tickRole, 55);
+        return;
+      }
+      length = Math.min(roles[roleIndex].length, length + 1);
+      rotatingRole.textContent = roles[roleIndex].slice(0, length);
+      if (length === roles[roleIndex].length) {
+        deleting = true;
+        timer = window.setTimeout(tickRole, 2100);
+      } else {
+        timer = window.setTimeout(tickRole, 85);
+      }
+    }
+
+    function syncRoleMotion() {
+      window.clearTimeout(timer);
+      roleIndex = 0;
+      length = roles[0].length;
+      deleting = true;
+      rotatingRole.textContent = roles[0];
+      rotatingRole.parentElement.classList.toggle('is-typing', !reducedMotion.matches);
+      if (!reducedMotion.matches && !document.hidden) {
+        timer = window.setTimeout(tickRole, 2100);
+      }
+    }
+
+    reducedMotion.addEventListener('change', syncRoleMotion);
+    document.addEventListener('visibilitychange', () => {
+      window.clearTimeout(timer);
+      if (!document.hidden && !reducedMotion.matches) {
+        timer = window.setTimeout(tickRole, 900);
+      }
+    });
+    syncRoleMotion();
+  }
+
+  // Frame-rate independent from pointer event frequency: one eased rAF loop, no idle work.
+  const heroParallax = document.querySelector('[data-hero-parallax]');
+  if (heroParallax) {
+    const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let frame = 0;
+    let lastFrameTime = 0;
+    let x = 0, y = 0, targetX = 0, targetY = 0;
+
+    function writeLayers() {
+      const shift = (value) => value.toFixed(2) + 'px';
+      heroParallax.style.setProperty('--bg-x', shift(-x * 6));
+      heroParallax.style.setProperty('--bg-y', shift(-y * 6));
+      heroParallax.style.setProperty('--lemon-x', shift(x * 15));
+      heroParallax.style.setProperty('--lemon-y', shift(y * 13));
+      heroParallax.style.setProperty('--navy-x', shift(-x * 10));
+      heroParallax.style.setProperty('--navy-y', shift(-y * 11));
+      heroParallax.style.setProperty('--lilac-x', shift(x * 18));
+      heroParallax.style.setProperty('--lilac-y', shift(-y * 13));
+      heroParallax.style.setProperty('--portrait-x', shift(x * 7));
+      heroParallax.style.setProperty('--portrait-y', shift(y * 5));
+    }
+
+    function tick(now) {
+      frame = 0;
+      const elapsed = lastFrameTime ? Math.min(48, now - lastFrameTime) : 16.7;
+      lastFrameTime = now;
+      const ease = 1 - Math.exp(-elapsed / 115);
+      x += (targetX - x) * ease;
+      y += (targetY - y) * ease;
+      writeLayers();
+      if (Math.abs(targetX - x) + Math.abs(targetY - y) > .0015) schedule();
+      else lastFrameTime = 0;
+    }
+
+    function schedule() {
+      if (!frame && finePointer.matches && !reducedMotion.matches && !document.hidden) {
+        frame = requestAnimationFrame(tick);
+      }
+    }
+
+    function reset() {
+      targetX = 0;
+      targetY = 0;
+      schedule();
+    }
+
+    function syncMotion() {
+      if (reducedMotion.matches || !finePointer.matches) {
+        cancelAnimationFrame(frame);
+        frame = 0;
+        lastFrameTime = 0;
+        x = y = targetX = targetY = 0;
+        writeLayers();
+      }
+    }
+
+    heroParallax.addEventListener('pointermove', (event) => {
+      if (!finePointer.matches || reducedMotion.matches ||
+          (event.pointerType !== 'mouse' && event.pointerType !== 'pen')) return;
+      const rect = heroParallax.getBoundingClientRect();
+      targetX = Math.max(-1, Math.min(1, ((event.clientX - rect.left) / rect.width) * 2 - 1));
+      targetY = Math.max(-1, Math.min(1, ((event.clientY - rect.top) / rect.height) * 2 - 1));
+      schedule();
+    }, { passive: true });
+    heroParallax.addEventListener('pointerleave', reset);
+    window.addEventListener('blur', reset);
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        cancelAnimationFrame(frame);
+        frame = 0;
+        lastFrameTime = 0;
+      } else schedule();
+    });
+    finePointer.addEventListener('change', syncMotion);
+    reducedMotion.addEventListener('change', syncMotion);
+    syncMotion();
   }
 
   const filters = document.querySelector('[data-project-filters]');

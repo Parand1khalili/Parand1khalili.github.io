@@ -45,7 +45,8 @@ class Document(HTMLParser):
 
 
 documents = {}
-for path in ROOT.glob('*.html'):
+# Validate deployable pages; theme-lab.html is a standalone design review artifact.
+for path in (ROOT / 'index.html', ROOT / 'projects.html'):
     document = Document(path.name)
     markup = path.read_text(encoding='utf-8')
     assert markup.lower().startswith('<!doctype html>')

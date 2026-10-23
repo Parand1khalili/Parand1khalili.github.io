@@ -2,6 +2,8 @@
 
 ## Portrait
 
+The homepage foreground (`portrait/parand-portrait-cutout.webp`) is an optimized transparent WebP derivative of the user's supplied cutout PNG. It was resized and compressed without generating a new face or changing the subject. The circular-stage background (`portrait/hero-rooftop.jpg`) is a grayscale, 720px square display crop from the user's rooftop-garden photograph supplied on October 23, 2026; the source image is not overwritten. Colored shapes and the outline remain individually editable HTML/CSS layers, moved with an optional reduced-motion-aware pointer effect. Neither original upload is published.
+
 The photograph was supplied by Parand Khalili for this website. The original stays untouched outside the public source. The local 480px and 768px WebP images and JPEG fallback are editorial crops and resized exports only. No face generation, background replacement, filters, or retouching was used. EXIF metadata is omitted from web exports.
 
 ## Authentic project artifacts
