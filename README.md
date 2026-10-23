@@ -89,6 +89,8 @@ All final checks passed in Chrome. Desktop, tablet and mobile screenshots were i
 
 ## Asset maintenance
 
+The stylesheet and script URLs in both HTML pages include a `v` query parameter to prevent an older browser-cached file from being used with updated markup. When changing `style.css` or `script.js`, update that file's `v` value in both pages together. The current values are the first 12 characters of the SHA-256 hash of each UTF-8 file with LF line endings. If the live portrait appears as separate rectangular images, use `Ctrl+F5` to reload the current CSS.
+
 Optional development commands (Pillow required):
 
 ```powershell
