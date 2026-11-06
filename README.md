@@ -2,6 +2,27 @@
 
 A static personal website for Computer Engineering, Data Analytics, AI, and Graph Machine Learning. It uses semantic HTML, local assets, maintained CSS, and progressive JavaScript enhancements. No framework, package installation, or build step is required to serve it on GitHub Pages.
 
+[**Visit the live portfolio**](https://parand1khalili.github.io/) · [**Explore projects**](https://parand1khalili.github.io/projects.html) · [**View source**](https://github.com/Parand1khalili/Parand1khalili.github.io)
+
+![Verified portfolio social-preview asset](./assets/social-preview.png)
+
+*Existing social preview from the portfolio source assets. It is a sharing graphic, not a screenshot of the current live page.*
+
+## Website structure
+
+```mermaid
+flowchart LR
+    A["Visitors"] --> B["index.html · research, work and experience"]
+    A --> C["projects.html · project index"]
+    B --> D["Shared style.css and script.js"]
+    C --> D
+    D --> E["Local images, CV and report links"]
+    B --> F["GitHub repositories and contact links"]
+    C --> F
+```
+
+**Content note:** the CV linked from the deployed site is the currently published asset; a separately refreshed November 2026 CV has been prepared but not yet published here. The validation notes below document an earlier development session and should not be interpreted as fresh tests of the live deployment.
+
 ## Local preview
 
 From the repository root:
@@ -12,7 +33,7 @@ python -m http.server 8000 --bind 127.0.0.1
 
 Open [the homepage](http://127.0.0.1:8000/) and [projects](http://127.0.0.1:8000/projects.html). Stop the server with `Ctrl+C`.
 
-Work remains local on the existing `master` branch. No branch, commit, pull request, push, or deployment was created.
+During the original local validation session, no new branch, commit, pull request, push, or deployment was created. Subsequent updates to this repository are separate from that historical statement.
 
 ## Visual direction and retained behavior
 
