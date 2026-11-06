@@ -59,3 +59,11 @@ The Quera, Sematec, and ETS TOEFL logos were supplied by the user on November 6,
 - `certificates/sematec-advanced-python.pdf`: a public raster copy of the user-supplied Advanced Python certificate. The original footer, which contains personal identifiers, was excluded before constructing this PDF. No original PDF, unredacted image, embedded attachment, or recoverable covered text is included. The name, course, 40-hour duration, score of 100, course dates, and issuer signatures remain visible. The public copy is labeled accordingly.
 
 Sematec course dates printed on the certificate are 1403/04/22–1403/06/23 (Solar Hijri). The site and CV use 2024 rather than the conflicting September–December range in the earlier CV. The original supplied files remain outside the repository.
+
+## Original GraphScope workflow
+
+The owner supplied the public [GraphScope repository](https://github.com/Parand1khalili/graphscope) for portfolio reuse. `projects/graphscope-original-preview.jpg` is copied unchanged from its `preview.jpg`. `projects/graphscope-workflow.webp` losslessly crops the original screenshot at (40,265,1230,1110), retaining the full scientific method map and its legends; no scientific element is redrawn or altered. The original full capture remains linked. Historical results and SARA extensions remain separate as in the source README.
+
+`logos/*-transparent.png` are genuine-alpha derivatives of the supplied institution/provider logos. Development-only `tools/prepare_logos.py` removes white source backgrounds; Sematec's enclosed white lettering is preserved. White CSS containers are removed. No blending-mode workaround is used.
+
+`projects/tetris-replay.svg` renders actual saved-genome board states via the public Board.drop implementation, not a new training run or application screenshot. `tools/generate_tetris_preview.py` records the adapter. `projects/compiler-passes.svg` follows the public AUJava README and App.java's three passes; team provenance is retained.

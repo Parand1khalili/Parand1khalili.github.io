@@ -24,7 +24,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="stylesheet" href="style.css?v=ccbc7b2d1fed">
+    <link rel="stylesheet" href="style.css?v=0f843ebca9af">
     <script src="script.js?v=03797677b212" defer>
     </script>
     <title>Project Index | Parand Khalili</title>
@@ -66,14 +66,14 @@
           <button class="filter-button" type="button" data-filter="data" aria-pressed="false" aria-controls="project-grid">Data & BI</button>
           <button class="filter-button" type="button" data-filter="systems" aria-pressed="false" aria-controls="project-grid">Systems & Software</button>
         </div>
-        <p class="project-count" role="status" aria-live="polite" aria-atomic="true" data-project-count>11 projects / All projects</p>
+        <p class="project-count" role="status" aria-live="polite" aria-atomic="true" data-project-count>12 projects / All projects</p>
         <div class="project-grid archive-grid" id="project-grid">
           <article class="project-card thesis-card" id="thesis" data-category="ml">
             <figure class="project-figure thesis-figure">
-              <a class="evidence-image" href="assets/thesis-pipeline.svg" target="_blank" rel="noopener noreferrer" aria-label="Open illustrative thesis workflow at full resolution">
-                <img src="assets/thesis-pipeline.svg" width="1120" height="380" alt="Illustrative thesis workflow: graph, active node selection, structure-aware LLM prompt, annotations, confidence filtering, and GNN classification." loading="lazy">
+              <a class="evidence-image" href="assets/projects/graphscope-workflow.webp" target="_blank" rel="noopener noreferrer" aria-label="Open the original GraphScope workflow at full resolution">
+                <img src="assets/projects/graphscope-workflow.webp" width="1190" height="845" alt="Original GraphScope workflow showing the historical B1 and Narrative comparison and separate SARA verification and arbitration lane." loading="lazy">
               </a>
-              <figcaption>Thesis methodology · ongoing work.</figcaption>
+              <figcaption>Original GraphScope workflow · historical comparison and separate SARA extension. Open for full-size reading.</figcaption>
             </figure>
             <div class="project-body">
               <div class="project-meta">
@@ -81,13 +81,13 @@
                 <span class="status">2026 · Ongoing</span>
               </div>
               <h2>Structure-Aware LLM-Based Graph Node Labeling</h2>
-              <p>An LLM-to-GNN node-classification workflow on Cora and CiteSeer. Controlled comparisons examine how real one- and two-hop graph evidence affects pseudo-label accuracy, confidence, and downstream GCN behavior. A matched FeatProp-based evaluation is in preparation.</p>
+              <p>GraphScope is an interactive research atlas for my structure-aware graph labeling work. It connects the recorded Cora topology, B1/Narrative v0 annotations, and matched historical GCN outcomes while keeping SARA extensions and prospective evaluation separate.</p>
               <details class="artifact-details case-study">
                 <summary>How I built it</summary>
                 <dl>
                   <div><dt>Research context</dt><dd>Undergraduate thesis at Amirkabir University of Technology, supervised by Dr. Mostafa Haghir Chehreghani; inspired by published label-free methods.</dd></div>
                   <div><dt>Current investigation</dt><dd>Structure-aware prompts, annotation efficiency, and reliable evaluation. Failed or conflicting labels and confidence limitations are an ongoing related investigation; an inspection interface is in progress.</dd></div>
-                  <div><dt>Status</dt><dd>Ongoing research, 2026–present. The diagram explains the methodology; it does not present experimental results.</dd></div>
+                  <div><dt>Status</dt><dd>Ongoing research, 2026–present. The original GraphScope workflow separates historical observations from SARA methods; no new SARA GCN improvement is claimed.</dd></div>
                 </dl>
               </details>
               <ul class="tag-list" aria-label="Thesis technologies">
@@ -100,13 +100,13 @@
               </a>
             </div>
           </article>
-          <article class="project-card" id="retail-forecast" data-category="ml data"><figure class="project-figure pastel-butter"><a class="evidence-image" href="assets/projects/retail-workflow.svg" target="_blank" rel="noopener noreferrer" aria-label="Open Retail forecasting and evaluation workflow at full resolution"><img src="assets/projects/retail-workflow.svg" width="800" height="480" alt="Retail forecasting and evaluation workflow" loading="lazy" decoding="async"></a><figcaption>The forecasting workflow I developed at EMRC.</figcaption></figure><div class="project-body"><div class="project-meta"><span>Applied forecasting / EMRC</span><span>2026</span></div><h2>Retail Sales Forecasting</h2><p>Independently developed a retail forecasting system combining statistical methods, CatBoost, and ensembles, with an interactive interface for configuring predictions, visualizing results, and exporting reports.</p><details class="artifact-details case-study">
+          <article class="project-card" id="retail-forecast" data-category="ml data"><div class="professional-preview"><strong>Product-specific forecasting</strong><span>Statistical · CatBoost · Blended</span><span>Historical backtesting · WAPE</span><small>Professional work · outputs kept private</small></div><div class="project-body"><div class="project-meta"><span>Applied forecasting / EMRC</span><span>2026</span></div><h2>Retail Sales Forecasting</h2><p>Independently developed a retail forecasting system comparing statistical, CatBoost-based, and blended approaches. Selected product-specific methods through historical backtesting and WAPE; achieved WAPE below 10% in model-selection backtests across evaluated datasets. Built an interactive configuration, review, and export interface.</p><details class="artifact-details case-study">
                 <summary>How I built it</summary>
                 <dl>
                   <div><dt>Modeling</dt><dd>Feature engineering for retail sales, historical backtesting, and WAPE-based evaluation across forecast horizons.</dd></div>
                   <div><dt>Error analysis</dt><dd>Analyze model errors across product and geographic segments to understand where forecasts succeed or struggle.</dd></div>
                   <div><dt>Delivery</dt><dd>Connect forecasting outputs to client-facing reporting and an interactive configuration and export workflow.</dd></div>
-                  <div><dt>Availability</dt><dd>Professional work described in the CV. Source code, client data, and performance figures are not publicly released here.</dd></div>
+                  <div><dt>Availability</dt><dd>Professional work described by the owner. Client data, forecast outputs, source code, and interface screenshots remain private. Reported WAPE refers specifically to model-selection backtests across evaluated datasets, not a production-wide guarantee.</dd></div>
                 </dl>
               </details><ul class="tag-list" aria-label="Retail forecasting technologies"><li>Python</li><li>CatBoost</li><li>Ensembles</li><li>Backtesting</li><li>WAPE</li></ul><a class="project-link" href="index.html#experience">Read the professional experience</a></div></article>
           <article class="project-card" id="credit-scoring" data-category="ml data">
@@ -158,6 +158,7 @@
               </a>
             </div>
           </article>
+          <article class="project-card" id="aujava" data-category="systems"><figure class="project-figure pastel-blue"><a class="evidence-image" href="assets/projects/compiler-passes.svg" target="_blank" rel="noopener noreferrer" aria-label="Open AUJava compiler passes at full resolution"><img src="assets/projects/compiler-passes.svg" width="800" height="480" alt="AUJava compiler passes" loading="lazy" decoding="async"></a><figcaption>Source-based compiler diagram; GCC is a separate execution step.</figcaption></figure><div class="project-body"><div class="project-meta"><span>Compilers</span><span>Team project</span></div><h2>AUJava to C Transpiler</h2><p>A three-pass compiler for a Java-like language: ANTLR4 parsing, class and member collection, inheritance resolution, static semantic checks, and C generation with virtual method dispatch.</p><details class="artifact-details case-study"><summary>Methods, implementation &amp; outputs</summary><dl><div><dt>Implementation evidence</dt><dd><a href="https://github.com/Parand1khalili/AUJava-Transpiler/blob/master/src/main/java/org/example/App.java" target="_blank" rel="noopener noreferrer">App.java</a> coordinates ClassCollectorVisitor, MemberCollectorVisitor, and CodeGeneratorVisitor; errors stop the pipeline before C output.</dd></div><div><dt>Demonstration</dt><dd><a href="https://github.com/Parand1khalili/AUJava-Transpiler/blob/master/demo.aujava" target="_blank" rel="noopener noreferrer">The checked-in demo</a> exercises inheritance, overriding, static members, loops, and arithmetic. Expected output is documented; no new compiler run is claimed.</dd></div><div><dt>Attribution &amp; testing</dt><dd>Collaborative university project; <a href="https://github.com/kianasherafati/AUJava-Transpiler" target="_blank" rel="noopener noreferrer">original team repository</a>. The README documents 27 positive/negative cases; their presence is not a newly executed test result.</dd></div></dl></details><ul class="tag-list" aria-label="Compiler technologies"><li>Java</li><li>ANTLR4</li><li>Maven</li><li>C / GCC</li></ul><a class="project-link" href="https://github.com/Parand1khalili/AUJava-Transpiler" target="_blank" rel="noopener noreferrer">View repository</a></div></article>
           <article class="project-card" id="mytorch" data-category="ml">
             <figure class="project-figure pastel-lilac">
               <a class="evidence-image" href="assets/projects/mytorch-accuracy.webp" target="_blank" rel="noopener noreferrer" aria-label="Open mytorch training and testing accuracy plot on wdbc data at full resolution">
@@ -276,7 +277,7 @@
             </div>
           </article>
           <article class="project-card" id="tetris" data-category="ml">
-            <figure class="project-figure pastel-butter"><a class="evidence-image" href="assets/projects/tetris-process.svg" target="_blank" rel="noopener noreferrer" aria-label="Open Tetris evolutionary optimization workflow at full resolution"><img src="assets/projects/tetris-process.svg" width="800" height="480" alt="Tetris evolutionary optimization workflow" loading="lazy" decoding="async"></a><figcaption>The evolutionary training loop.</figcaption></figure>
+            <figure class="project-figure pastel-butter"><a class="evidence-image" href="assets/projects/tetris-replay.svg" target="_blank" rel="noopener noreferrer" aria-label="Open Replay of saved Tetris placement genome at full resolution"><img src="assets/projects/tetris-replay.svg" width="800" height="480" alt="Replay of saved Tetris placement genome" loading="lazy" decoding="async"></a><figcaption>Actual Board.drop replay: saved genome after 8, 16, and 24 placements; no new training.</figcaption></figure>
             <div class="project-body">
               <div class="project-meta">
                 <span>Game AI</span>
