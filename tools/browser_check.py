@@ -81,7 +81,7 @@ with sync_playwright() as p:
 
     # Filter semantics, matching counts and native keyboard activation.
     page.goto(BASE + '/projects.html')
-    for label, expected in (('AI & ML', 6), ('Data & BI', 3), ('Systems & Software', 5), ('All projects', 12)):
+    for label, expected in (('AI & ML', 6), ('Data & BI', 3), ('Systems & Software', 4), ('All projects', 11)):
         button = page.get_by_role('button', name=label, exact=True)
         button.focus()
         button.press('Enter')
@@ -175,7 +175,7 @@ with sync_playwright() as p:
         assert nojs_page.locator('#site-navigation').is_visible()
         assert nojs_page.locator('.menu-toggle').is_hidden()
         assert not nojs_page.evaluate('document.documentElement.scrollWidth > innerWidth')
-    assert nojs_page.locator('[data-category]:visible').count() == 12
+    assert nojs_page.locator('[data-category]:visible').count() == 11
     assert nojs_page.locator('[data-project-filters]').is_hidden()
     nojs.close()
     report.append('PASS JavaScript disabled: content, navigation, all projects')

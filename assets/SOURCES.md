@@ -67,3 +67,11 @@ The owner supplied the public [GraphScope repository](https://github.com/Parand1
 `logos/*-transparent.png` are genuine-alpha derivatives of the supplied institution/provider logos. Development-only `tools/prepare_logos.py` removes white source backgrounds; Sematec's enclosed white lettering is preserved. White CSS containers are removed. No blending-mode workaround is used.
 
 `projects/tetris-replay.svg` renders actual saved-genome board states via the public Board.drop implementation, not a new training run or application screenshot. `tools/generate_tetris_preview.py` records the adapter. `projects/compiler-passes.svg` follows the public AUJava README and App.java's three passes; team provenance is retained.
+
+## Owner-selected project visuals and education refinement
+
+Credit cover: `projects/credit-notebook-heatmap.webp`, extracted directly from the stored PNG output of zero-based cell 28 in `notebooks/2_model_development_and_evaluation.ipynb` in the credit-scoring repository. Original dimensions 1193 × 584, lossless WebP conversion. No notebook training was executed. This model-comparison heatmap is separate from the metrics in saved tuned-model metadata.
+
+Hipka cover: `projects/hipka-execution.webp`, from the owner's supplied July 21, 2026 execution screenshot. Original proportions retained at 1080 × 2340; WebP quality 91. It depicts the earlier Persian interface and is not represented as a new run of the later Audius implementation. Open the image for full-size inspection.
+
+TwitJava was removed from both active portfolio pages at the owner's request. Education uses a 60px university logo beside the institution name; the degree card no longer stretches to match the taller teaching column.

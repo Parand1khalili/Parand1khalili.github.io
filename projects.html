@@ -24,7 +24,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="stylesheet" href="style.css?v=0f843ebca9af">
+    <link rel="stylesheet" href="style.css?v=0c1b22fafed7">
     <script src="script.js?v=03797677b212" defer>
     </script>
     <title>Project Index | Parand Khalili</title>
@@ -66,7 +66,7 @@
           <button class="filter-button" type="button" data-filter="data" aria-pressed="false" aria-controls="project-grid">Data & BI</button>
           <button class="filter-button" type="button" data-filter="systems" aria-pressed="false" aria-controls="project-grid">Systems & Software</button>
         </div>
-        <p class="project-count" role="status" aria-live="polite" aria-atomic="true" data-project-count>12 projects / All projects</p>
+        <p class="project-count" role="status" aria-live="polite" aria-atomic="true" data-project-count>11 projects / All projects</p>
         <div class="project-grid archive-grid" id="project-grid">
           <article class="project-card thesis-card" id="thesis" data-category="ml">
             <figure class="project-figure thesis-figure">
@@ -110,13 +110,7 @@
                 </dl>
               </details><ul class="tag-list" aria-label="Retail forecasting technologies"><li>Python</li><li>CatBoost</li><li>Ensembles</li><li>Backtesting</li><li>WAPE</li></ul><a class="project-link" href="index.html#experience">Read the professional experience</a></div></article>
           <article class="project-card" id="credit-scoring" data-category="ml data">
-            <figure class="project-figure pastel-blue">
-              <a class="evidence-image" href="assets/projects/credit-roc.webp" target="_blank" rel="noopener noreferrer" aria-label="Open baseline credit-scoring model roc curves at full resolution">
-                <img src="assets/projects/credit-roc.webp" width="695" height="550" alt="Baseline credit-scoring model ROC curves" loading="lazy" decoding="async">
-              </a>
-              <figcaption>Baseline-model ROC comparison. <a href="https://github.com/Parand1khalili/credit-scoring-risk-mitigation/blob/main/docs/report.pdf" target="_blank" rel="noopener noreferrer">Report · p. 8</a>
-              </figcaption>
-            </figure>
+            <figure class="project-figure pastel-blue"><a class="evidence-image" href="assets/projects/credit-notebook-heatmap.webp" target="_blank" rel="noopener noreferrer" aria-label="Open the original notebook evaluation heatmap at full resolution"><img src="assets/projects/credit-notebook-heatmap.webp" width="1193" height="584" alt="Test-set evaluation heatmap comparing six model and threshold configurations from the saved credit-scoring notebook" loading="lazy" decoding="async"></a><figcaption>Saved notebook model comparison. <a href="https://github.com/Parand1khalili/credit-scoring-risk-mitigation/blob/main/notebooks/2_model_development_and_evaluation.ipynb" target="_blank" rel="noopener noreferrer">Evaluation notebook</a></figcaption></figure>
             <div class="project-body">
               <div class="project-meta">
                 <span>Credit risk analytics</span>
@@ -144,7 +138,7 @@
                 <summary>How I built it</summary>
                 <dl>
                   <div><dt>Problem &amp; approach</dt><dd>Predict loan default from applicant data with financial feature engineering, target encoding, baseline comparisons, Random Forest tuning, threshold selection, and risk bands.</dd></div>
-                  <div><dt>Reported evaluation</dt><dd>ROC-AUC 0.8680; PR-AUC 0.5168; recall 68.33%; F1 0.5718 at threshold 0.54. These are stored historical results for the tuned model; the cover image compares baseline models.</dd></div>
+                  <div><dt>Reported evaluation</dt><dd>ROC-AUC 0.8680; PR-AUC 0.5168; recall 68.33%; F1 0.5718 at threshold 0.54. These are stored historical results for the tuned model; the cover heatmap is a separate saved notebook comparison and does not represent those stored tuned-model metrics.</dd></div>
                   <div><dt>Explore the work</dt><dd><a href="https://github.com/Parand1khalili/credit-scoring-risk-mitigation/blob/main/notebooks/1_data_preprocessing_and_eda.ipynb" target="_blank" rel="noopener noreferrer">EDA &amp; preprocessing</a> · <a href="https://github.com/Parand1khalili/credit-scoring-risk-mitigation/blob/main/notebooks/2_model_development_and_evaluation.ipynb" target="_blank" rel="noopener noreferrer">Model development</a> · <a href="https://github.com/Parand1khalili/credit-scoring-risk-mitigation/blob/main/model_artifacts/model_metadata.json" target="_blank" rel="noopener noreferrer">Saved model metrics</a></dd></div>
                   <div><dt>Evaluation context</dt><dd>Dataset- and split-specific results, rather than a claim of lending readiness. Fold-specific target encoding and the evaluation protocol matter when reproducing the pipeline.</dd></div>
                 </dl>
@@ -356,34 +350,9 @@
               </a>
             </div>
           </article>
-          <article class="project-card" id="twitjava" data-category="systems">
-            <figure class="project-figure pastel-blue"><a class="evidence-image" href="assets/projects/twitjava-architecture.svg" target="_blank" rel="noopener noreferrer" aria-label="Open JavaFX client and socket server architecture at full resolution"><img src="assets/projects/twitjava-architecture.svg" width="800" height="480" alt="JavaFX client and socket server architecture" loading="lazy" decoding="async"></a><figcaption>A guide to the project architecture.</figcaption></figure>
-            <div class="project-body">
-              <div class="project-meta">
-                <span>Desktop application</span>
-                <span>Software project</span>
-              </div>
-              <h2>TwitJava / Social Platform Simulation</h2>
-              <p>An educational Java 17 social application with a JavaFX desktop client, a TCP socket server, shared domain models, and SQLite-backed data access. Includes registration, profiles, tweets, timelines, and follower views.</p>
-              <details class="artifact-details case-study">
-                <summary>How I built it</summary>
-                <dl>
-                  <div><dt>Architecture</dt><dd>JavaFX screens and controllers → client I/O → TCP socket server on port 9898 → user, tweet, and relationship operations → SQLite.</dd></div>
-                  <div><dt>Implementation</dt><dd>Separate server.Server and HelloApplication entry points, FXML layouts, shared models, and Maven/JavaFX build configuration.</dd></div>
-                  <div><dt>Explore the work</dt><dd><a href="https://github.com/Parand1khalili/twitterFinal/blob/master/README.md" target="_blank" rel="noopener noreferrer">Architecture &amp; startup notes</a>. The repository describes an exploration recipe; clean-environment startup still requires verification.</dd></div>
-                </dl>
-              </details>
-              <ul class="tag-list" aria-label="TwitJava technologies">
-                <li>Java</li>
-                <li>JavaFX</li>
-                <li>Application design</li>
-              </ul>
-              <a class="project-link" href="https://github.com/Parand1khalili/twitterFinal" target="_blank" rel="noopener noreferrer" aria-label="View repository: TwitJava on GitHub">View repository
-              </a>
-            </div>
-          </article>
+
           <article class="project-card" id="hipka" data-category="systems">
-            <figure class="project-figure pastel-lilac"><a class="evidence-image" href="assets/projects/hipka-architecture.svg" target="_blank" rel="noopener noreferrer" aria-label="Open Hipka Music architecture at full resolution"><img src="assets/projects/hipka-architecture.svg" width="800" height="480" alt="Hipka Music architecture" loading="lazy" decoding="async"></a><figcaption>How discovery, playback, and the local library fit together.</figcaption></figure>
+            <figure class="project-figure hipka-figure"><a class="evidence-image" href="assets/projects/hipka-execution.webp" target="_blank" rel="noopener noreferrer" aria-label="Open the supplied Hipka execution screenshot"><img src="assets/projects/hipka-execution.webp" width="1080" height="2340" alt="Owner-supplied Hipka app execution screenshot showing the Persian home screen and playback controls" loading="lazy" decoding="async"></a><figcaption>Supplied execution screenshot · July 2026 UI.</figcaption></figure>
             <div class="project-body">
               <div class="project-meta">
                 <span>Android application</span>
