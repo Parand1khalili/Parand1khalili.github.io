@@ -1433,6 +1433,64 @@ em {
   padding-top: 14px;
   border-top: 1px solid var(--line);
 }
+.credentials > h3 {
+  margin: 0 0 16px;
+  font-size: 17px;
+}
+.credential-entry {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  align-items: start;
+  gap: 12px;
+}
+.credential-entry + .credential-entry {
+  margin-top: 22px;
+}
+.credential-entry > img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+.credential-entry h4 {
+  margin: 0 0 5px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.credential-entry p {
+  margin: 0 0 5px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.credential-entry a {
+  display: inline-block;
+  padding-block: 8px;
+  font-size: 13px;
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.credential-entry .certificate-note {
+  font-size: 12px;
+  line-height: 1.6;
+}
+.language-summary {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.language-summary > img {
+  width: 112px;
+  height: auto;
+  padding: 7px;
+  border-radius: 4px;
+  background: white;
+}
+.language-summary p {
+  flex: 1 1 240px;
+  margin: 0;
+}
 /* Experience as numbered editorial dossiers, not the reference site's timeline. */
 .experience-section {
   border-top: 0;

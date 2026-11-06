@@ -153,6 +153,11 @@ with sync_playwright() as p:
     response = context.request.get(BASE + '/assets/Parand_Khalili_CV.pdf')
     assert response.status == 200 and response.body().startswith(b'%PDF')
     report.append('PASS CV served as PDF')
+    response = context.request.get(BASE + '/assets/certificates/sematec-advanced-python.pdf')
+    assert response.status == 200 and response.body().startswith(b'%PDF')
+    response = context.request.get(BASE + '/assets/certificates/quera-data-analysis.webp')
+    assert response.status == 200 and response.body().startswith(b'RIFF')
+    report.append('PASS public certificate PDF and image links')
 
     reduced = browser.new_context(reduced_motion='reduce', viewport={'width': 390, 'height': 844})
     reduced_page = reduced.new_page()

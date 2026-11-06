@@ -94,8 +94,8 @@ for text in [
     '<b>Development Tools:</b> Git, Linux, Docker'
 ]: p(text)
 section('Certifications')
-p('Data Analysis Certificate, Quera | Summer 2025')
-p('Advanced Python Bootcamp, Sematec | Sep-Dec 2024')
+p('Data Analysis with Python, Quera | Coursework: Summer 2025; certificate issued March 2026 (perfect score)')
+p('Advanced Python, Sematec | 2024 | 40 hours | Score: 100')
 section('Languages &amp; Test Scores')
 p('Persian (native) | English: TOEFL iBT 5/6 (CEFR C1)<br/>Reading 5, Listening 6, Writing 5, Speaking 4.5')
 

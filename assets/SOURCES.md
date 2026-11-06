@@ -50,3 +50,12 @@ Brand names and marks identify the technologies used in the portfolio. They rema
 The five new SVGs are geometric technical diagrams, not app screenshots or experimental results. Existing project evidence is preserved. The thesis diagram's prompt-context and evaluation notes were aligned with the supplied November CV; node selection/filtering remain research directions.
 
 `Parand_Khalili_CV.pdf` was refreshed from the user's supplied resume text on November 6, 2026, using `tools/generate_cv.py`. The two rendered PDF pages were visually reviewed. The source claims and ongoing-work status are preserved; website/project links point to known public destinations.
+
+## Certificate evidence and additional issuer logos
+
+The Quera, Sematec, and ETS TOEFL logos were supplied by the user on November 6, 2026 and copied without alteration to `logos/quera.jpg`, `logos/sematec.jpg`, and `logos/toefl.png`. They identify the course or test provider; no endorsement is implied.
+
+- `certificates/quera-data-analysis.webp`: proportionally resized from the user-supplied certificate, full content retained, maximum dimension 1800px, WebP quality 90. The document states a perfect score and an issue date of March 2026. Coursework timing remains separately attributed to the supplied CV (Summer 2025).
+- `certificates/sematec-advanced-python.pdf`: a public raster copy of the user-supplied Advanced Python certificate. The original footer, which contains personal identifiers, was excluded before constructing this PDF. No original PDF, unredacted image, embedded attachment, or recoverable covered text is included. The name, course, 40-hour duration, score of 100, course dates, and issuer signatures remain visible. The public copy is labeled accordingly.
+
+Sematec course dates printed on the certificate are 1403/04/22–1403/06/23 (Solar Hijri). The site and CV use 2024 rather than the conflicting September–December range in the earlier CV. The original supplied files remain outside the repository.

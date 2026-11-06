@@ -46,3 +46,5 @@ The homepage and archive share `style.css` and `script.js`. Keep project summari
 Preserve the warm ivory, sunflower, and terracotta identity, local portrait assets, responsive navigation, keyboard focus, reduced-motion support, filters, native disclosures, and no-JavaScript access. Keep diagrams distinct from recorded outputs. Confirm source links and claims before publishing.
 
 The November update also removes decorative link arrows, redundant numbering, faux contact icons, and the rotating typewriter introduction. The opening copy is personal and static; the existing warm palette and portrait remain. The static checker prevents decorative link arrows from being reintroduced.
+
+The certificates section links to the supplied Quera evidence and a public Sematec PDF with the personal-identifier footer removed before PDF construction. Original private documents are not committed. Quera coursework timing and certificate issue timing are displayed separately; Sematec uses the certificate's course dates. Issuer logos sit beside the corresponding credential, and the TOEFL logo accompanies the language scores.
