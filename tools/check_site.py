@@ -49,6 +49,7 @@ documents = {}
 for path in (ROOT / 'index.html', ROOT / 'projects.html'):
     document = Document(path.name)
     markup = path.read_text(encoding='utf-8')
+    assert not any(glyph in markup for glyph in ('↗', '↘', '↑')), f'{path.name}: decorative link arrows'
     assert markup.lower().startswith('<!doctype html>')
     document.feed(markup)
     assert not document.stack, f'{path.name}: unclosed tags {document.stack}'

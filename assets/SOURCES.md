@@ -36,3 +36,17 @@ Python, PyTorch, NumPy, Pandas, scikit-learn, Git, Linux, and Docker logos come 
 The Power BI logo comes from [Microsoft / PowerBI-Icons](https://github.com/microsoft/PowerBI-Icons/blob/main/SVG/Power-BI.svg), under [CC BY 4.0](logos/LICENSE-POWERBI.txt). Attribution: Microsoft, PowerBI-Icons. The SVG is unchanged and displayed at a smaller size. This does not imply Microsoft endorsement.
 
 Brand names and marks identify the technologies used in the portfolio. They remain the property of their respective owners.
+
+## November 2026 additions
+
+- `logos/aut.png`, `logos/emrc.jpg`, `logos/yaas.jpg`: original image files supplied by the user on November 6, 2026 for the education and employment sections. Copied without cropping, recoloring, or redrawing. The organizations retain their marks; placement identifies education/employment and does not claim endorsement.
+- `projects/xv6-result.webp`: optimized derivative of [the public xv6 recorded output](https://github.com/Parand1khalili/xv6_syscall/blob/main/resault.png), retrieved November 6, 2026. Original 739 × 577 dimensions and full content retained; WebP quality 88. This is a historical run, not a newly verified kernel build.
+- `projects/retail-workflow.svg`: CV-based method diagram only. No internal source, client data, measurements, or private repository content is included.
+- `projects/tetris-process.svg`: method diagram derived from [the public Tetris documentation](https://github.com/Parand1khalili/Fundamentals-of-AI/tree/main/06-Tetris-Genetic-Algorithm).
+- `projects/hipka-architecture.svg`: implementation diagram derived from [Hipka's README](https://github.com/Parand1khalili/Hipka_Music/blob/main/README.md).
+- `projects/twitjava-architecture.svg`: architecture diagram derived from [Mini-Twitter's README](https://github.com/Parand1khalili/twitterFinal/blob/master/README.md).
+- `projects/english-architecture.svg`: source-structure diagram based on [the Django root URL configuration](https://github.com/Parand1khalili/Software-Engineering-1403-01_G1/blob/master/src/english_website/urls.py) and its app modules. This collaborative project is not represented as solely authored work.
+
+The five new SVGs are geometric technical diagrams, not app screenshots or experimental results. Existing project evidence is preserved. The thesis diagram's prompt-context and evaluation notes were aligned with the supplied November CV; node selection/filtering remain research directions.
+
+`Parand_Khalili_CV.pdf` was refreshed from the user's supplied resume text on November 6, 2026, using `tools/generate_cv.py`. The two rendered PDF pages were visually reviewed. The source claims and ongoing-work status are preserved; website/project links point to known public destinations.

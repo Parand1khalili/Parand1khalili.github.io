@@ -20,7 +20,7 @@
   </g>
   <g font-family="Segoe UI,Arial,sans-serif" fill="#252525" font-size="16" text-anchor="middle">
     <text x="119" y="154">Text-attributed</text><text x="119" y="179">graph</text>
-    <text x="311" y="154">Active node</text><text x="311" y="179">selection</text>
+    <text x="311" y="154">Node selection</text><text x="311" y="179">(under study)</text>
     <text x="489" y="154">Structure-aware</text><text x="489" y="179">LLM prompt</text>
     <text x="667" y="154">Generated</text><text x="667" y="179">annotations</text>
     <text x="845" y="154">Confidence</text><text x="845" y="179">filtering</text>
@@ -28,8 +28,8 @@
   </g>
   <g font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#60605A">
     <text x="35" y="278">PROMPT CONTEXT</text>
-    <text x="35" y="307">1-hop / 2-hop neighbors and random walks</text>
+    <text x="35" y="307">Real 1-hop / 2-hop graph evidence on Cora and CiteSeer</text>
     <text x="597" y="278">RESEARCH QUESTION</text>
-    <text x="597" y="307">How can graph structure support label-efficient learning?</text>
+    <text x="597" y="307">Matched FeatProp evaluation in preparation; reliability under study.</text>
   </g>
 </svg>

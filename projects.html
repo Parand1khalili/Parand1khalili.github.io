@@ -24,8 +24,8 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="stylesheet" href="style.css?v=5fff93f5d23f">
-    <script src="script.js?v=48653282b3f6" defer>
+    <link rel="stylesheet" href="style.css?v=70729da955b2">
+    <script src="script.js?v=03797677b212" defer>
     </script>
     <title>Project Index | Parand Khalili</title>
   </head>
@@ -47,18 +47,16 @@
           <a href="index.html#research">Research</a>
           <a href="projects.html" aria-current="page">Projects</a>
           <a href="index.html#contact">Contact</a>
-          <a class="nav-cv" href="assets/Parand_Khalili_CV.pdf" target="_blank" rel="noopener noreferrer">View CV <span aria-hidden="true">↗</span>
+          <a class="nav-cv" href="assets/Parand_Khalili_CV.pdf?v=20261106" target="_blank" rel="noopener noreferrer">View CV
           </a>
         </nav>
       </div>
     </header>
     <main id="main" tabindex="-1">
       <section class="page-hero wrap" aria-labelledby="projects-heading">
-        <a class="page-back" href="index.html">
-          <span aria-hidden="true">←</span> Back to home</a>
-        <div class="eyebrow">Project index / Research, applied work & systems</div>
-        <h1 id="projects-heading">Project index</h1>
-        <p>A closer look at my work in graph machine learning, analytics, and software — with public code where available and a clear distinction between projects and ongoing research.</p>
+        <a class="page-back" href="index.html"> Back to home</a>
+        <h1 id="projects-heading">Projects</h1>
+        <p>Research, coursework, and tools I have built. Open a project to see the approach, implementation details, and source material.</p>
       </section>
       <div class="wrap">
         <div class="filter-bar" role="group" aria-label="Filter projects by discipline" data-project-filters hidden>
@@ -68,38 +66,55 @@
           <button class="filter-button" type="button" data-filter="data" aria-pressed="false" aria-controls="project-grid">Data & BI</button>
           <button class="filter-button" type="button" data-filter="systems" aria-pressed="false" aria-controls="project-grid">Systems & Software</button>
         </div>
-        <p class="project-count" role="status" aria-live="polite" aria-atomic="true" data-project-count>10 projects / All projects</p>
+        <p class="project-count" role="status" aria-live="polite" aria-atomic="true" data-project-count>11 projects / All projects</p>
         <div class="project-grid archive-grid" id="project-grid">
           <article class="project-card thesis-card" id="thesis" data-category="ml">
             <figure class="project-figure thesis-figure">
               <a class="evidence-image" href="assets/thesis-pipeline.svg" target="_blank" rel="noopener noreferrer" aria-label="Open illustrative thesis workflow at full resolution">
                 <img src="assets/thesis-pipeline.svg" width="1120" height="380" alt="Illustrative thesis workflow: graph, active node selection, structure-aware LLM prompt, annotations, confidence filtering, and GNN classification." loading="lazy">
               </a>
-              <figcaption>Illustrative methodology · ongoing thesis, not experimental output.</figcaption>
+              <figcaption>Thesis methodology · ongoing work.</figcaption>
             </figure>
             <div class="project-body">
               <div class="project-meta">
-                <span>01 / Undergraduate thesis</span>
+                <span>Undergraduate thesis</span>
                 <span class="status">2026 · Ongoing</span>
               </div>
               <h2>Structure-Aware LLM-Based Graph Node Labeling</h2>
-              <p>Developing a label-efficient framework for node classification on text-attributed graphs. Current directions include structure-aware prompting with graph neighborhoods and random walks, active node selection, and confidence-based filtering of LLM-generated annotations.</p>
+              <p>An LLM-to-GNN node-classification workflow on Cora and CiteSeer. Controlled comparisons examine how real one- and two-hop graph evidence affects pseudo-label accuracy, confidence, and downstream GCN behavior. A matched FeatProp-based evaluation is in preparation.</p>
+              <details class="artifact-details case-study">
+                <summary>How I built it</summary>
+                <dl>
+                  <div><dt>Research context</dt><dd>Undergraduate thesis at Amirkabir University of Technology, supervised by Dr. Mostafa Haghir Chehreghani; inspired by published label-free methods.</dd></div>
+                  <div><dt>Current investigation</dt><dd>Structure-aware prompts, annotation efficiency, and reliable evaluation. Failed or conflicting labels and confidence limitations are an ongoing related investigation; an inspection interface is in progress.</dd></div>
+                  <div><dt>Status</dt><dd>Ongoing research, 2026–present. The diagram explains the methodology; it does not present experimental results.</dd></div>
+                </dl>
+              </details>
               <ul class="tag-list" aria-label="Thesis technologies">
                 <li>Python</li>
                 <li>PyTorch</li>
                 <li>PyTorch Geometric</li>
                 <li>LLMs / GNNs</li>
               </ul>
-              <a class="project-link" href="index.html#research">Read the research overview <span class="arrow" aria-hidden="true">↗</span>
+              <a class="project-link" href="index.html#research">Read the research overview
               </a>
             </div>
           </article>
+          <article class="project-card" id="retail-forecast" data-category="ml data"><figure class="project-figure pastel-butter"><a class="evidence-image" href="assets/projects/retail-workflow.svg" target="_blank" rel="noopener noreferrer" aria-label="Open Retail forecasting and evaluation workflow at full resolution"><img src="assets/projects/retail-workflow.svg" width="800" height="480" alt="Retail forecasting and evaluation workflow" loading="lazy" decoding="async"></a><figcaption>The forecasting workflow I developed at EMRC.</figcaption></figure><div class="project-body"><div class="project-meta"><span>Applied forecasting / EMRC</span><span>2026</span></div><h2>Retail Sales Forecasting</h2><p>Independently developed a retail forecasting system combining statistical methods, CatBoost, and ensembles, with an interactive interface for configuring predictions, visualizing results, and exporting reports.</p><details class="artifact-details case-study">
+                <summary>How I built it</summary>
+                <dl>
+                  <div><dt>Modeling</dt><dd>Feature engineering for retail sales, historical backtesting, and WAPE-based evaluation across forecast horizons.</dd></div>
+                  <div><dt>Error analysis</dt><dd>Analyze model errors across product and geographic segments to understand where forecasts succeed or struggle.</dd></div>
+                  <div><dt>Delivery</dt><dd>Connect forecasting outputs to client-facing reporting and an interactive configuration and export workflow.</dd></div>
+                  <div><dt>Availability</dt><dd>Professional work described in the CV. Source code, client data, and performance figures are not publicly released here.</dd></div>
+                </dl>
+              </details><ul class="tag-list" aria-label="Retail forecasting technologies"><li>Python</li><li>CatBoost</li><li>Ensembles</li><li>Backtesting</li><li>WAPE</li></ul><a class="project-link" href="index.html#experience">Read the professional experience</a></div></article>
           <article class="project-card" id="credit-scoring" data-category="ml data">
             <figure class="project-figure pastel-blue">
               <a class="evidence-image" href="assets/projects/credit-roc.webp" target="_blank" rel="noopener noreferrer" aria-label="Open baseline credit-scoring model roc curves at full resolution">
                 <img src="assets/projects/credit-roc.webp" width="695" height="550" alt="Baseline credit-scoring model ROC curves" loading="lazy" decoding="async">
               </a>
-              <figcaption>Baseline-model ROC comparison. <a href="https://github.com/Parand1khalili/credit-scoring-risk-mitigation/blob/main/docs/report.pdf" target="_blank" rel="noopener noreferrer">Report · p. 8 ↗</a>
+              <figcaption>Baseline-model ROC comparison. <a href="https://github.com/Parand1khalili/credit-scoring-risk-mitigation/blob/main/docs/report.pdf" target="_blank" rel="noopener noreferrer">Report · p. 8</a>
               </figcaption>
             </figure>
             <div class="project-body">
@@ -125,12 +140,21 @@
                   <figcaption>Feature importance · report, page 10.</figcaption>
                 </figure>
               </details>
+              <details class="artifact-details case-study">
+                <summary>How I built it</summary>
+                <dl>
+                  <div><dt>Problem &amp; approach</dt><dd>Predict loan default from applicant data with financial feature engineering, target encoding, baseline comparisons, Random Forest tuning, threshold selection, and risk bands.</dd></div>
+                  <div><dt>Reported evaluation</dt><dd>ROC-AUC 0.8680; PR-AUC 0.5168; recall 68.33%; F1 0.5718 at threshold 0.54. These are stored historical results for the tuned model; the cover image compares baseline models.</dd></div>
+                  <div><dt>Explore the work</dt><dd><a href="https://github.com/Parand1khalili/credit-scoring-risk-mitigation/blob/main/notebooks/1_data_preprocessing_and_eda.ipynb" target="_blank" rel="noopener noreferrer">EDA &amp; preprocessing</a> · <a href="https://github.com/Parand1khalili/credit-scoring-risk-mitigation/blob/main/notebooks/2_model_development_and_evaluation.ipynb" target="_blank" rel="noopener noreferrer">Model development</a> · <a href="https://github.com/Parand1khalili/credit-scoring-risk-mitigation/blob/main/model_artifacts/model_metadata.json" target="_blank" rel="noopener noreferrer">Saved model metrics</a></dd></div>
+                  <div><dt>Evaluation context</dt><dd>Dataset- and split-specific results, rather than a claim of lending readiness. Fold-specific target encoding and the evaluation protocol matter when reproducing the pipeline.</dd></div>
+                </dl>
+              </details>
               <ul class="tag-list" aria-label="Credit scoring technologies">
                 <li>Python</li>
                 <li>scikit-learn</li>
                 <li>Random Forest</li>
               </ul>
-              <a class="project-link" href="https://github.com/Parand1khalili/credit-scoring-risk-mitigation" target="_blank" rel="noopener noreferrer" aria-label="View repository: Credit Scoring on GitHub">View repository <span class="arrow" aria-hidden="true">↗</span>
+              <a class="project-link" href="https://github.com/Parand1khalili/credit-scoring-risk-mitigation" target="_blank" rel="noopener noreferrer" aria-label="View repository: Credit Scoring on GitHub">View repository
               </a>
             </div>
           </article>
@@ -139,7 +163,7 @@
               <a class="evidence-image" href="assets/projects/mytorch-accuracy.webp" target="_blank" rel="noopener noreferrer" aria-label="Open mytorch training and testing accuracy plot on wdbc data at full resolution">
                 <img src="assets/projects/mytorch-accuracy.webp" width="571" height="455" alt="MyTorch training and testing accuracy plot on WDBC data" loading="lazy" decoding="async">
               </a>
-              <figcaption>Saved notebook output on WDBC data. <a href="https://github.com/Parand1khalili/MLP-Classifier-MyTorch-Framework/blob/main/task2.ipynb" target="_blank" rel="noopener noreferrer">Notebook ↗</a>
+              <figcaption>Saved notebook output on WDBC data. <a href="https://github.com/Parand1khalili/MLP-Classifier-MyTorch-Framework/blob/main/task2.ipynb" target="_blank" rel="noopener noreferrer">Notebook</a>
               </figcaption>
             </figure>
             <div class="project-body">
@@ -149,13 +173,22 @@
               </div>
               <h2>MyTorch Framework & MLP Classifier</h2>
               <p>A custom neural network library built from core components: tensors, linear layers, activation functions, losses, backpropagation, and SGD. The repository also includes a PyTorch MLP classifier for the Wisconsin breast cancer dataset.</p>
+              <details class="artifact-details case-study">
+                <summary>How I built it</summary>
+                <dl>
+                  <div><dt>Two complementary experiments</dt><dd>A PyTorch MLP classifier for the Wisconsin Diagnostic Breast Cancer dataset, plus an educational NumPy-based library exposing the learning primitives.</dd></div>
+                  <div><dt>Implementation</dt><dd>Tensor operations and gradient support, linear layers, ReLU/Sigmoid/Softmax, MSE and cross-entropy losses, backpropagation, and parameter updates through SGD and other optimizer modules.</dd></div>
+                  <div><dt>Explore the work</dt><dd><a href="https://github.com/Parand1khalili/MLP-Classifier-MyTorch-Framework/blob/main/task1.ipynb" target="_blank" rel="noopener noreferrer">PyTorch notebook</a> · <a href="https://github.com/Parand1khalili/MLP-Classifier-MyTorch-Framework/blob/main/task2.ipynb" target="_blank" rel="noopener noreferrer">MyTorch notebook</a> · <a href="https://github.com/Parand1khalili/MLP-Classifier-MyTorch-Framework/tree/main/mytorch" target="_blank" rel="noopener noreferrer">Framework source</a></dd></div>
+                  <div><dt>Output</dt><dd>The accuracy plot is a saved notebook artifact, not a new training run. The repository currently has no pinned environment or standalone test runner.</dd></div>
+                </dl>
+              </details>
               <ul class="tag-list" aria-label="MyTorch technologies">
                 <li>Python</li>
                 <li>NumPy</li>
                 <li>PyTorch</li>
                 <li>Linear algebra</li>
               </ul>
-              <a class="project-link" href="https://github.com/Parand1khalili/MLP-Classifier-MyTorch-Framework" target="_blank" rel="noopener noreferrer" aria-label="View repository: MyTorch on GitHub">View repository <span class="arrow" aria-hidden="true">↗</span>
+              <a class="project-link" href="https://github.com/Parand1khalili/MLP-Classifier-MyTorch-Framework" target="_blank" rel="noopener noreferrer" aria-label="View repository: MyTorch on GitHub">View repository
               </a>
             </div>
           </article>
@@ -164,7 +197,7 @@
               <a class="evidence-image" href="assets/projects/sokoban.webp" target="_blank" rel="noopener noreferrer" aria-label="Open sokoban solver interface from the fundamentals of ai project at full resolution">
                 <img src="assets/projects/sokoban.webp" width="687" height="648" alt="Sokoban solver interface from the Fundamentals of AI project" loading="lazy" decoding="async">
               </a>
-              <figcaption>Sokoban interface captured in the repository. <a href="https://github.com/Parand1khalili/Fundamentals-of-AI/blob/main/01-Sokoban-AI-Solver/screenshot.png" target="_blank" rel="noopener noreferrer">Source screenshot ↗</a>
+              <figcaption>Sokoban interface captured in the repository. <a href="https://github.com/Parand1khalili/Fundamentals-of-AI/blob/main/01-Sokoban-AI-Solver/screenshot.png" target="_blank" rel="noopener noreferrer">Source screenshot</a>
               </figcaption>
             </figure>
             <div class="project-body">
@@ -180,14 +213,23 @@
                   <a href="assets/projects/lunarlander-learning.webp" target="_blank" rel="noopener noreferrer">
                     <img src="assets/projects/lunarlander-learning.webp" width="1152" height="670" loading="lazy" alt="LunarLander learning curve saved in the Fundamentals of AI repository.">
                   </a>
-                  <figcaption>Original LunarLander learning curve · <a href="https://github.com/Parand1khalili/Fundamentals-of-AI/blob/main/04-RL-LunarLander/learning_curve.png" target="_blank" rel="noopener noreferrer">source ↗</a>.</figcaption>
+                  <figcaption>Original LunarLander learning curve · <a href="https://github.com/Parand1khalili/Fundamentals-of-AI/blob/main/04-RL-LunarLander/learning_curve.png" target="_blank" rel="noopener noreferrer">source</a>.</figcaption>
                 </figure>
                 <figure>
                   <a href="https://github.com/Parand1khalili/Fundamentals-of-AI/blob/main/03-Isolation-Game-Agent/viz.gif" target="_blank" rel="noopener noreferrer">
                     <img src="assets/projects/isolation-state.webp" width="480" height="318" loading="lazy" alt="An Isolation board state from the repository's saved game animation.">
                   </a>
-                  <figcaption>Frame from the recorded Isolation game; open the original animation ↗.</figcaption>
+                  <figcaption>Frame from the recorded Isolation game; open the original animation.</figcaption>
                 </figure>
+              </details>
+              <details class="artifact-details case-study">
+                <summary>How I built it</summary>
+                <dl>
+                  <div><dt>Search &amp; constraints</dt><dd><a href="https://github.com/Parand1khalili/Fundamentals-of-AI/tree/main/01-Sokoban-AI-Solver" target="_blank" rel="noopener noreferrer">Sokoban</a>: BFS, DFS, UCS, Greedy, A*, deadlock-aware heuristics. <a href="https://github.com/Parand1khalili/Fundamentals-of-AI/tree/main/02-Crossword-CSP-Solver" target="_blank" rel="noopener noreferrer">Crosswords</a>: AC-3, backtracking, MRV, degree heuristic, and LCV.</dd></div>
+                  <div><dt>Games &amp; learning</dt><dd><a href="https://github.com/Parand1khalili/Fundamentals-of-AI/tree/main/03-Isolation-Game-Agent" target="_blank" rel="noopener noreferrer">Isolation</a>: minimax, alpha–beta, iterative deepening. <a href="https://github.com/Parand1khalili/Fundamentals-of-AI/tree/main/04-RL-LunarLander" target="_blank" rel="noopener noreferrer">LunarLander &amp; MDPs</a>: Q-learning, value iteration, policy iteration.</dd></div>
+                  <div><dt>Uncertainty &amp; evolution</dt><dd><a href="https://github.com/Parand1khalili/Fundamentals-of-AI/tree/main/05-Bayesian-Networks" target="_blank" rel="noopener noreferrer">Bayesian networks</a>: variable elimination, likelihood weighting, Gibbs sampling. <a href="https://github.com/Parand1khalili/Fundamentals-of-AI/tree/main/06-Tetris-Genetic-Algorithm" target="_blank" rel="noopener noreferrer">Tetris</a>: evolutionary placement optimization.</dd></div>
+                  <div><dt>Explore the work</dt><dd>Six coursework projects with individual entry points, reports, and setup instructions. The screenshots and learning curve are original saved artifacts.</dd></div>
+                </dl>
               </details>
               <ul class="tag-list" aria-label="Fundamentals of AI technologies">
                 <li>Python</li>
@@ -195,7 +237,7 @@
                 <li>CSP</li>
                 <li>Reinforcement learning</li>
               </ul>
-              <a class="project-link" href="https://github.com/Parand1khalili/Fundamentals-of-AI" target="_blank" rel="noopener noreferrer" aria-label="View repository: Fundamentals of Artificial Intelligence on GitHub">View repository <span class="arrow" aria-hidden="true">↗</span>
+              <a class="project-link" href="https://github.com/Parand1khalili/Fundamentals-of-AI" target="_blank" rel="noopener noreferrer" aria-label="View repository: Fundamentals of Artificial Intelligence on GitHub">View repository
               </a>
             </div>
           </article>
@@ -204,7 +246,7 @@
               <a class="evidence-image" href="assets/projects/hr-report-excerpt.webp" target="_blank" rel="noopener noreferrer" aria-label="Open hr project report analysis excerpt in persian at full resolution">
                 <img src="assets/projects/hr-report-excerpt.webp" width="934" height="710" alt="HR project report analysis excerpt in Persian" loading="lazy" decoding="async">
               </a>
-              <figcaption>Actual report excerpt (Persian); not a dashboard screenshot. <a href="https://github.com/Parand1khalili/PowerBI_HR_Analysis/blob/main/PowerBI_Project_Report.pdf" target="_blank" rel="noopener noreferrer">Report · p. 7 ↗</a>
+              <figcaption>Analysis from the project report · Persian. <a href="https://github.com/Parand1khalili/PowerBI_HR_Analysis/blob/main/PowerBI_Project_Report.pdf" target="_blank" rel="noopener noreferrer">Report · p. 7</a>
               </figcaption>
             </figure>
             <div class="project-body">
@@ -214,23 +256,27 @@
               </div>
               <h2>HR Analytics / Power BI</h2>
               <p>A Power BI dashboard exploring employee attrition, salary distributions, and hiring trends. Data cleaning and transformation support views by department, city, demographic group, and joining year.</p>
+              <details class="artifact-details case-study">
+                <summary>How I built it</summary>
+                <dl>
+                  <div><dt>Workflow</dt><dd>Employee.csv → Python cleaning notebook → prepared salary dataset → Power BI model and KPI measures → written analysis.</dd></div>
+                  <div><dt>Questions</dt><dd>Explore departures and attrition by department, age, city, and gender; compensation by department and experience; hiring by joining year; and observed attrition against a 15% reference.</dd></div>
+                  <div><dt>Reported dataset snapshot</dt><dd>4,653 employee records and 1,600 departures, approximately 34% attrition. These describe this project dataset; group differences do not establish causation.</dd></div>
+                  <div><dt>Explore the work</dt><dd><a href="https://github.com/Parand1khalili/PowerBI_HR_Analysis/blob/main/preprocesssing.ipynb" target="_blank" rel="noopener noreferrer">Preparation notebook</a> · <a href="https://github.com/Parand1khalili/PowerBI_HR_Analysis/blob/main/BI_Project.pbix" target="_blank" rel="noopener noreferrer">Power BI report</a> · <a href="https://github.com/Parand1khalili/PowerBI_HR_Analysis/blob/main/PowerBI_Project_Report.pdf" target="_blank" rel="noopener noreferrer">PDF analysis</a></dd></div>
+                </dl>
+              </details>
               <ul class="tag-list" aria-label="HR Analytics technologies">
                 <li>Power BI</li>
                 <li>Python</li>
                 <li>Data preparation</li>
                 <li>Visualization</li>
               </ul>
-              <a class="project-link" href="https://github.com/Parand1khalili/PowerBI_HR_Analysis" target="_blank" rel="noopener noreferrer" aria-label="View repository: HR Analytics on GitHub">View repository <span class="arrow" aria-hidden="true">↗</span>
+              <a class="project-link" href="https://github.com/Parand1khalili/PowerBI_HR_Analysis" target="_blank" rel="noopener noreferrer" aria-label="View repository: HR Analytics on GitHub">View repository
               </a>
             </div>
           </article>
           <article class="project-card" id="tetris" data-category="ml">
-            <div class="project-art art-tetris" aria-hidden="true">
-              <span class="figure-label">06 / EVOLUTIONARY ALGORITHMS</span>
-              <span class="art-symbol">Evolutionary game AI</span>
-              <span class="art-rule">
-              </span>
-            </div>
+            <figure class="project-figure pastel-butter"><a class="evidence-image" href="assets/projects/tetris-process.svg" target="_blank" rel="noopener noreferrer" aria-label="Open Tetris evolutionary optimization workflow at full resolution"><img src="assets/projects/tetris-process.svg" width="800" height="480" alt="Tetris evolutionary optimization workflow" loading="lazy" decoding="async"></a><figcaption>The evolutionary training loop.</figcaption></figure>
             <div class="project-body">
               <div class="project-meta">
                 <span>Game AI</span>
@@ -238,45 +284,53 @@
               </div>
               <h2>Tetris AI via Genetic Algorithms</h2>
               <p>An autonomous Tetris agent using selection, crossover, and mutation. A board-evaluation fitness function guides the search, with visualization of the training process.</p>
+              <details class="artifact-details case-study">
+                <summary>How I built it</summary>
+                <dl>
+                  <div><dt>Optimization</dt><dd>Evolve placement genomes against a fixed Tetris shape sequence. Board fitness guides selection, crossover, mutation, and elitism.</dd></div>
+                  <div><dt>Implementation</dt><dd>A training CLI saves the best placement sequence; a Pygame replay visualizes the agent. Training parameters include generations, population, and elitism.</dd></div>
+                  <div><dt>Explore the work</dt><dd><a href="https://github.com/Parand1khalili/Fundamentals-of-AI/blob/main/06-Tetris-Genetic-Algorithm/README.md" target="_blank" rel="noopener noreferrer">Step-by-step setup &amp; limitations</a> · <a href="https://github.com/Parand1khalili/Fundamentals-of-AI/blob/main/06-Tetris-Genetic-Algorithm/tetris_evolution/evolution/implementation.py" target="_blank" rel="noopener noreferrer">Evolution operators</a></dd></div>
+                  <div><dt>Scope</dt><dd>Placement optimization on a fixed sequence, rather than evidence of general performance on unseen Tetris games.</dd></div>
+                </dl>
+              </details>
               <ul class="tag-list" aria-label="Tetris AI technologies">
                 <li>Python</li>
                 <li>Pygame</li>
                 <li>Genetic algorithms</li>
               </ul>
-              <div class="project-status-note">Project documented in my CV. Public code is currently unavailable.</div>
+              <a class="project-link" href="https://github.com/Parand1khalili/Fundamentals-of-AI/tree/main/06-Tetris-Genetic-Algorithm" target="_blank" rel="noopener noreferrer">Explore code &amp; training guide</a>
             </div>
           </article>
           <article class="project-card" id="xv6" data-category="systems">
-            <div class="project-art art-systems" aria-hidden="true">
-              <span class="figure-label">07 / OPERATING SYSTEMS</span>
-              <span class="art-code">user → syscall → kernel</span>
-              <span class="art-rule">
-              </span>
-            </div>
+            <figure class="project-figure pastel-blue"><a class="evidence-image" href="assets/projects/xv6-result.webp" target="_blank" rel="noopener noreferrer" aria-label="Open Recorded xv6 terminal output at full resolution"><img src="assets/projects/xv6-result.webp" width="739" height="577" alt="Recorded xv6 terminal output" loading="lazy" decoding="async"></a><figcaption>Original recorded terminal output. <a href="https://github.com/Parand1khalili/xv6_syscall/blob/main/resault.png" target="_blank" rel="noopener noreferrer">Source image</a>.</figcaption></figure>
             <div class="project-body">
               <div class="project-meta">
                 <span>Systems programming</span>
                 <span>2025</span>
               </div>
               <h2>xv6 Operating System Enhancements</h2>
-              <p>Custom system calls and multithreading capabilities for the xv6 kernel, working with memory management and process scheduling in a C-based Linux and Docker environment.</p>
+              <p>Custom child-process information and trap-reporting system calls in RISC-V xv6. The public snapshot follows the user/kernel boundary from syscall declarations and stubs to dispatch, process data, and copyout.</p>
+              <details class="artifact-details case-study">
+                <summary>How I built it</summary>
+                <dl>
+                  <div><dt>Implementation path</dt><dd>user.h / usys.pl → ecall → syscall.c → sysproc.c → process and trap state → bounded user-facing structures through copyout.</dd></div>
+                  <div><dt>Example programs</dt><dd>test_cp.c forks children and prints process IDs, parent IDs, states, and names. trapreport.c triggers a trap and inspects recorded information.</dd></div>
+                  <div><dt>Explore the work</dt><dd><a href="https://github.com/Parand1khalili/xv6_syscall/blob/main/test_cp.c" target="_blank" rel="noopener noreferrer">Child-process example</a> · <a href="https://github.com/Parand1khalili/xv6_syscall/blob/main/trapreport.c" target="_blank" rel="noopener noreferrer">Trap-report example</a></dd></div>
+                  <div><dt>Repository scope</dt><dd>Selected modified files, rather than a complete bootable xv6 checkout. A compatible upstream base must be integrated before building; the screenshot records an earlier run.</dd></div>
+                </dl>
+              </details>
               <ul class="tag-list" aria-label="xv6 technologies">
                 <li>C</li>
                 <li>Linux</li>
                 <li>Shell scripting</li>
                 <li>Docker</li>
               </ul>
-              <a class="project-link" href="https://github.com/Parand1khalili/xv6_syscall" target="_blank" rel="noopener noreferrer" aria-label="View repository: xv6 on GitHub">View repository <span class="arrow" aria-hidden="true">↗</span>
+              <a class="project-link" href="https://github.com/Parand1khalili/xv6_syscall" target="_blank" rel="noopener noreferrer" aria-label="View repository: xv6 on GitHub">View repository
               </a>
             </div>
           </article>
           <article class="project-card" id="english-app" data-category="systems">
-            <div class="project-art art-systems" aria-hidden="true">
-              <span class="figure-label">08 / SOFTWARE ENGINEERING</span>
-              <span class="art-symbol">English learning application</span>
-              <span class="art-rule">
-              </span>
-            </div>
+            <figure class="project-figure pastel-blue"><a class="evidence-image" href="assets/projects/english-architecture.svg" target="_blank" rel="noopener noreferrer" aria-label="Open Django learning website source structure at full resolution"><img src="assets/projects/english-architecture.svg" width="800" height="480" alt="Django learning website source structure" loading="lazy" decoding="async"></a><figcaption>A guide to the project architecture.</figcaption></figure>
             <div class="project-body">
               <div class="project-meta">
                 <span>Web application</span>
@@ -284,63 +338,78 @@
               </div>
               <h2>English Learning Web App</h2>
               <p>A collaborative software engineering project for an English learning website. Its Django codebase organizes application features across modules and includes registration and learning views.</p>
-              <ul class="tag-list" aria-label="English Learning technologies">
+              <details class="artifact-details case-study">
+                <summary>How I built it</summary>
+                <dl>
+                  <div><dt>Collaboration &amp; structure</dt><dd>University team software-engineering project. The root Django URL configuration connects registration and nine group app modules; project credit remains collaborative.</dd></div>
+                  <div><dt>Implementation</dt><dd>Separate URL, view, model, and template files organize feature modules rather than putting all behavior into one page.</dd></div>
+                  <div><dt>Explore the work</dt><dd><a href="https://github.com/Parand1khalili/Software-Engineering-1403-01_G1/blob/master/src/english_website/urls.py" target="_blank" rel="noopener noreferrer">Root URL configuration</a> · <a href="https://github.com/Parand1khalili/Software-Engineering-1403-01_G1/tree/master/src" target="_blank" rel="noopener noreferrer">Source modules</a></dd></div>
+                  <div><dt>Scope</dt><dd>This overview describes the checked-in source structure. No live demo or fresh deployment is claimed.</dd></div>
+                </dl>
+              </details><ul class="tag-list" aria-label="English Learning technologies">
                 <li>Python</li>
                 <li>Django</li>
                 <li>Web development</li>
               </ul>
-              <a class="project-link" href="https://github.com/Parand1khalili/Software-Engineering-1403-01_G1" target="_blank" rel="noopener noreferrer" aria-label="View repository: English Learning Web App on GitHub">View repository <span class="arrow" aria-hidden="true">↗</span>
+              <a class="project-link" href="https://github.com/Parand1khalili/Software-Engineering-1403-01_G1" target="_blank" rel="noopener noreferrer" aria-label="View repository: English Learning Web App on GitHub">View repository
               </a>
             </div>
           </article>
           <article class="project-card" id="twitjava" data-category="systems">
-            <div class="project-art art-systems" aria-hidden="true">
-              <span class="figure-label">09 / APPLICATION DEVELOPMENT</span>
-              <span class="art-code">User → Tweet → Timeline</span>
-              <span class="art-rule">
-              </span>
-            </div>
+            <figure class="project-figure pastel-blue"><a class="evidence-image" href="assets/projects/twitjava-architecture.svg" target="_blank" rel="noopener noreferrer" aria-label="Open JavaFX client and socket server architecture at full resolution"><img src="assets/projects/twitjava-architecture.svg" width="800" height="480" alt="JavaFX client and socket server architecture" loading="lazy" decoding="async"></a><figcaption>A guide to the project architecture.</figcaption></figure>
             <div class="project-body">
               <div class="project-meta">
                 <span>Desktop application</span>
                 <span>Software project</span>
               </div>
               <h2>TwitJava / Social Platform Simulation</h2>
-              <p>A Java-based social platform simulation with a JavaFX interface. The codebase includes sign-in and registration, user profiles, tweets, a timeline, and follower views.</p>
+              <p>An educational Java 17 social application with a JavaFX desktop client, a TCP socket server, shared domain models, and SQLite-backed data access. Includes registration, profiles, tweets, timelines, and follower views.</p>
+              <details class="artifact-details case-study">
+                <summary>How I built it</summary>
+                <dl>
+                  <div><dt>Architecture</dt><dd>JavaFX screens and controllers → client I/O → TCP socket server on port 9898 → user, tweet, and relationship operations → SQLite.</dd></div>
+                  <div><dt>Implementation</dt><dd>Separate server.Server and HelloApplication entry points, FXML layouts, shared models, and Maven/JavaFX build configuration.</dd></div>
+                  <div><dt>Explore the work</dt><dd><a href="https://github.com/Parand1khalili/twitterFinal/blob/master/README.md" target="_blank" rel="noopener noreferrer">Architecture &amp; startup notes</a>. The repository describes an exploration recipe; clean-environment startup still requires verification.</dd></div>
+                </dl>
+              </details>
               <ul class="tag-list" aria-label="TwitJava technologies">
                 <li>Java</li>
                 <li>JavaFX</li>
                 <li>Application design</li>
               </ul>
-              <a class="project-link" href="https://github.com/Parand1khalili/twitterFinal" target="_blank" rel="noopener noreferrer" aria-label="View repository: TwitJava on GitHub">View repository <span class="arrow" aria-hidden="true">↗</span>
+              <a class="project-link" href="https://github.com/Parand1khalili/twitterFinal" target="_blank" rel="noopener noreferrer" aria-label="View repository: TwitJava on GitHub">View repository
               </a>
             </div>
           </article>
           <article class="project-card" id="hipka" data-category="systems">
-            <div class="project-art art-systems" aria-hidden="true">
-              <span class="figure-label">10 / MOBILE DEVELOPMENT</span>
-              <span class="art-symbol">Android music application</span>
-              <span class="art-rule">
-              </span>
-            </div>
+            <figure class="project-figure pastel-lilac"><a class="evidence-image" href="assets/projects/hipka-architecture.svg" target="_blank" rel="noopener noreferrer" aria-label="Open Hipka Music architecture at full resolution"><img src="assets/projects/hipka-architecture.svg" width="800" height="480" alt="Hipka Music architecture" loading="lazy" decoding="async"></a><figcaption>How discovery, playback, and the local library fit together.</figcaption></figure>
             <div class="project-body">
               <div class="project-meta">
                 <span>Android application</span>
                 <span>Software project</span>
               </div>
               <h2>Hipka Music</h2>
-              <p>An Android music application with a Kotlin codebase, including playback, playlists, local data storage, and a layered repository architecture.</p>
+              <p>A Kotlin / Jetpack Compose music app for Audius discovery and streaming, with Media3 background playback, local favorites, and permitted offline downloads. English and Persian interfaces support RTL and light/dark themes.</p>
+              <details class="artifact-details case-study">
+                <summary>How I built it</summary>
+                <dl>
+                  <div><dt>Architecture</dt><dd>Compose → ViewModels / StateFlow → repositories, with Hilt dependency injection. Retrofit/OkHttp handles catalog requests; Room stores favorites and cached metadata; WorkManager manages permitted downloads.</dd></div>
+                  <div><dt>Playback &amp; offline</dt><dd>Queues, shuffle, repeat, seeking, playback speed, sleep timer, audio focus, and headphone-disconnect handling. Downloads recheck provider permission; cached metadata does not imply downloaded audio.</dd></div>
+                  <div><dt>My project context</dt><dd>Originally a university team project, now maintained as a personal portfolio project. Original contributions by Parand Khalili, Hasti Kabirsamadi, and Kiana remain in Git history.</dd></div>
+                  <div><dt>Explore the work</dt><dd><a href="https://github.com/Parand1khalili/Hipka_Music/blob/main/README.md" target="_blank" rel="noopener noreferrer">Architecture &amp; build instructions</a> · <a href="https://github.com/Parand1khalili/Hipka_Music/blob/main/docs/VERIFICATION.md" target="_blank" rel="noopener noreferrer">Verification notes</a>. Legacy Supabase social/profile code is disabled by default; the default app works without sign-in.</dd></div>
+                </dl>
+              </details>
               <ul class="tag-list" aria-label="Hipka Music technologies">
                 <li>Kotlin</li>
                 <li>Android</li>
-                <li>Gradle</li>
+                <li>Jetpack Compose</li><li>Media3</li><li>Room</li>
               </ul>
-              <a class="project-link" href="https://github.com/Parand1khalili/Hipka_Music" target="_blank" rel="noopener noreferrer" aria-label="View repository: Hipka Music on GitHub">View repository <span class="arrow" aria-hidden="true">↗</span>
+              <a class="project-link" href="https://github.com/Parand1khalili/Hipka_Music" target="_blank" rel="noopener noreferrer" aria-label="View repository: Hipka Music on GitHub">View repository
               </a>
             </div>
           </article>
         </div>
-        <p class="archive-note">The thesis is ongoing research. Project descriptions reflect my CV and public repositories; public code links are included where verified.</p>
+        <p class="archive-note">Research is ongoing. Reported metrics and screenshots come from saved project outputs; diagrams explain the methods and architecture. Source links are included with each project.</p>
       </div>
       <section class="section contact-section" aria-labelledby="project-contact-heading">
         <div class="wrap contact-layout">
@@ -349,9 +418,9 @@
             <p>Let's talk about research, data, or the next thing to build.</p>
           </div>
           <div>
-            <a class="contact-email" href="mailto:parandkhalili@aut.ac.ir">parandkhalili@aut.ac.ir <span class="arrow" aria-hidden="true">↗</span>
+            <a class="contact-email" href="mailto:parandkhalili@aut.ac.ir">parandkhalili@aut.ac.ir
             </a>
-            <a class="text-link" href="index.html#contact">All contact links <span class="arrow" aria-hidden="true">↗</span>
+            <a class="text-link" href="index.html#contact">All contact links
             </a>
           </div>
         </div>
@@ -361,7 +430,7 @@
       <div class="wrap footer-inner">
         <span>© <span data-year>2026</span> Parand Khalili</span>
         <a class="asset-credits" href="assets/SOURCES.md">Asset sources & credits</a>
-        <a href="#top">Back to top ↑</a>
+        <a href="#top">Back to top</a>
       </div>
     </footer>
   </body>

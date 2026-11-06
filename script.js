@@ -101,62 +101,6 @@
     syncNavigation();
   }
 
-  // Real areas of work; the first title remains readable without JavaScript.
-  const rotatingRole = document.querySelector('[data-rotating-role]');
-  if (rotatingRole) {
-    const roles = ['Graph ML Researcher', 'Exploring LLM Limitations', 'Data Insights Analyst', 'BI Solutions Developer'];
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    let timer;
-    let roleIndex = 0;
-    let length = roles[0].length;
-    let deleting = true;
-
-    function tickRole() {
-      if (document.hidden || reducedMotion.matches) return;
-      if (deleting) {
-        length = Math.max(0, length - 1);
-        rotatingRole.textContent = roles[roleIndex].slice(0, length);
-        if (length === 0) {
-          roleIndex = (roleIndex + 1) % roles.length;
-          deleting = false;
-          timer = window.setTimeout(tickRole, 320);
-          return;
-        }
-        timer = window.setTimeout(tickRole, 55);
-        return;
-      }
-      length = Math.min(roles[roleIndex].length, length + 1);
-      rotatingRole.textContent = roles[roleIndex].slice(0, length);
-      if (length === roles[roleIndex].length) {
-        deleting = true;
-        timer = window.setTimeout(tickRole, 2100);
-      } else {
-        timer = window.setTimeout(tickRole, 85);
-      }
-    }
-
-    function syncRoleMotion() {
-      window.clearTimeout(timer);
-      roleIndex = 0;
-      length = roles[0].length;
-      deleting = true;
-      rotatingRole.textContent = roles[0];
-      rotatingRole.parentElement.classList.toggle('is-typing', !reducedMotion.matches);
-      if (!reducedMotion.matches && !document.hidden) {
-        timer = window.setTimeout(tickRole, 2100);
-      }
-    }
-
-    reducedMotion.addEventListener('change', syncRoleMotion);
-    document.addEventListener('visibilitychange', () => {
-      window.clearTimeout(timer);
-      if (!document.hidden && !reducedMotion.matches) {
-        timer = window.setTimeout(tickRole, 900);
-      }
-    });
-    syncRoleMotion();
-  }
-
   // Frame-rate independent from pointer event frequency: one eased rAF loop, no idle work.
   const heroParallax = document.querySelector('[data-hero-parallax]');
   if (heroParallax) {

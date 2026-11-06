@@ -8,6 +8,9 @@ Run:
 import json
 from pathlib import Path
 import sys
+from functools import partial
+from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
+from threading import Thread
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / '.local-tools'))
@@ -15,6 +18,11 @@ from playwright.sync_api import sync_playwright, expect
 import tinycss2
 
 BASE = 'http://127.0.0.1:8000'
+server = None
+if '--serve' in sys.argv:
+    server = ThreadingHTTPServer(('127.0.0.1', 0), partial(SimpleHTTPRequestHandler, directory=str(ROOT)))
+    Thread(target=server.serve_forever, daemon=True).start()
+    BASE = f'http://127.0.0.1:{server.server_port}'
 OUTPUT = ROOT / '.preview'
 OUTPUT.mkdir(exist_ok=True)
 report = []
@@ -53,6 +61,8 @@ with sync_playwright() as p:
             assert page.locator('main').is_visible()
             overflow = page.evaluate('document.documentElement.scrollWidth > innerWidth')
             overflowing = page.evaluate('''() => [...document.querySelectorAll('main *')].filter(el => {
+                // The portrait deliberately extends beyond its clipped collage containers.
+                if (el.matches('.collage-disc img, .collage-popout img')) return false;
                 const r = el.getBoundingClientRect();
                 return r.width > 0 && (r.right > innerWidth + 1 || r.left < -1);
             }).map(el => ({tag: el.tagName, class: el.className, text: el.textContent.slice(0, 70)}))''')
@@ -71,7 +81,7 @@ with sync_playwright() as p:
 
     # Filter semantics, matching counts and native keyboard activation.
     page.goto(BASE + '/projects.html')
-    for label, expected in (('AI & ML', 5), ('Data & BI', 2), ('Systems & Software', 4), ('All projects', 10)):
+    for label, expected in (('AI & ML', 6), ('Data & BI', 3), ('Systems & Software', 4), ('All projects', 11)):
         button = page.get_by_role('button', name=label, exact=True)
         button.focus()
         button.press('Enter')
@@ -89,6 +99,16 @@ with sync_playwright() as p:
             image.scroll_into_view_if_needed()
             page.wait_for_function('(img) => img.complete && img.naturalWidth > 0', arg=image.element_handle())
     report.append('PASS authentic project evidence disclosures and image loading')
+
+    for disclosure in page.locator('.case-study summary').all():
+        disclosure.focus()
+        disclosure.press('Enter')
+        assert disclosure.locator('..').get_attribute('open') is not None
+        assert disclosure.locator('..').locator('dd:visible').count() >= 3
+    for width in (1440, 768, 390, 320):
+        page.set_viewport_size({'width': width, 'height': 900})
+        assert not page.evaluate('document.documentElement.scrollWidth > innerWidth')
+    report.append('PASS technical project disclosures: keyboard activation, visible content, expanded mobile layout')
 
     for route in ('/', '/projects.html'):
         page.set_viewport_size({'width': 390, 'height': 844})
@@ -150,7 +170,7 @@ with sync_playwright() as p:
         assert nojs_page.locator('#site-navigation').is_visible()
         assert nojs_page.locator('.menu-toggle').is_hidden()
         assert not nojs_page.evaluate('document.documentElement.scrollWidth > innerWidth')
-    assert nojs_page.locator('[data-category]:visible').count() == 10
+    assert nojs_page.locator('[data-category]:visible').count() == 11
     assert nojs_page.locator('[data-project-filters]').is_hidden()
     nojs.close()
     report.append('PASS JavaScript disabled: content, navigation, all projects')
@@ -163,3 +183,5 @@ with sync_playwright() as p:
 
 (OUTPUT / 'browser-report.json').write_text(json.dumps(report, indent=2), encoding='utf-8')
 print('\n'.join(report))
+if server:
+    server.shutdown()
