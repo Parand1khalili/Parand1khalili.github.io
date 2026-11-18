@@ -11,3 +11,6 @@ Local Release2 verification:static checker3pages/139references PASS;shared/newJS
 
 
 Publication readback found a real fail-closed interactive-loader issue:Windows CRLF source bytes differed from Git LF public JSON. Static tables stayed available. Forward correction canonicalizes research assets to LF and pins their line-ending policy;exporter now writes canonical bytes. Also added an actual Accuracy/Macro-F1 chart selector,keeping0..100% and0..1axes respectively. Repeated local8width metric/replay checks pass. Final public production outcome is recorded in the delivery report and ignored.preview production logs;do not infer success from this predeployment note.
+
+
+Production verification completed for beac907b319280285730788e5ecdb4b876b02d8b:Pages built,Actions44322046478 success;all8width research replay/metric/refresh/class-table checks,noJS,back/forward and zero page errors PASS against actual public URL. Remote home/projects/case-study/data/JS/CSS match local content (newline-normalized HTML/JS;data exact LF identity). Public GraphScope c2c011f Pages built;node1528deep-link,refresh and workflow navigation PASS. Public screenshots saved under.preview/public-sara-{desktop,mobile}.png. Follow-up copy spacing preserves scientific values and behavior. Full WCAG/screen-reader,Safari/Firefox and semantic L2 review remain unverified;PDF deliberately withheld.
