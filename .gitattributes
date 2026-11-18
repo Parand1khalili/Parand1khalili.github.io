@@ -1,0 +1,5 @@
+
+research/*.json text eol=lf
+research/*.js text eol=lf
+research/*.css text eol=lf
+research/*.html text eol=lf

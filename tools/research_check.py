@@ -37,7 +37,7 @@ with sync_playwright() as pw:
  for width in [320,390,560,768,820,1024,1280,1440]:
   page.set_viewport_size({'width':width,'height':900});page.goto(base+'/research/sara.html');page.locator('#evaluation-controls').wait_for(state='visible')
   assert not page.evaluate('document.documentElement.scrollWidth > innerWidth'), page.evaluate('Array.from(document.querySelectorAll("body *")).filter(e=>e.getBoundingClientRect().right>innerWidth+1).slice(0,40).map(e=>[e.tagName,e.className,e.getBoundingClientRect().width,getComputedStyle(e).overflowX])')
-  page.locator('#arm').select_option('D');assert '81.2576' in page.locator('#evaluation-output').inner_text()
+  page.locator('#metric').select_option('f1');assert '0.80710' in page.locator('#evaluation-output').inner_text();page.locator('#metric').select_option('accuracy');page.locator('#arm').select_option('D');assert '81.2576' in page.locator('#evaluation-output').inner_text()
   page.locator('#study').select_option('CiteSeer120');page.locator('#arm').select_option('D');assert '-0.1663' in page.locator('#evaluation-output').inner_text()
   page.locator('#seed').select_option('7');assert 'Saved seed 7' in page.locator('#evaluation-output').inner_text()
   page.get_by_text('Selected-arm class recall and mean-count confusion',exact=True).click();assert not page.evaluate('document.documentElement.scrollWidth > innerWidth')

@@ -24,4 +24,4 @@ for dataset,size in [('PubMed60',60),('CiteSeer120',120),('Cora R1',140)]:
    a['classwise']=[{'name':c,'recall':statistics.mean(float(r['recall']) for r in cr if r['dataset']==dataset and r['arm']==a['id'] and r['class_name']==c)} for c in classes]
    cm=rows(base+'evaluation_confusion.csv');a['confusion']=[[sum(int(r['count']) for r in cm if r['dataset']==dataset and r['arm']==a['id'] and int(r['true_class'])==i and int(r['predicted_class'])==j)/10 for j in range(len(classes))] for i in range(len(classes))]
  data['studies'].append({'id':dataset,'size':size,'contract':'Historical R1; CE/noPS; LR0.005; test2568' if dataset=='Cora R1' else 'Final R0 referral + P1 fusion; fixed full-cohort test complement; ten matched GCN seeds','classes':classes,'arms':arms})
-(R/'results.json').write_text(json.dumps(data,indent=2)+'\n',encoding='utf-8')
+(R/'results.json').write_bytes((json.dumps(data,indent=2)+'\n').encode('utf-8'))
