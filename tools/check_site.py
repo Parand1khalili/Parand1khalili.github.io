@@ -46,8 +46,8 @@ class Document(HTMLParser):
 
 documents = {}
 # Validate deployable pages; theme-lab.html is a standalone design review artifact.
-for path in (ROOT / 'index.html', ROOT / 'projects.html'):
-    document = Document(path.name)
+for path in (ROOT / 'index.html', ROOT / 'projects.html', ROOT / 'research/sara.html'):
+    document = Document(str(path.relative_to(ROOT)).replace(chr(92),"/"))
     markup = path.read_text(encoding='utf-8')
     assert not any(glyph in markup for glyph in ('↗', '↘', '↑')), f'{path.name}: decorative link arrows'
     assert markup.lower().startswith('<!doctype html>')
@@ -61,7 +61,7 @@ for path in (ROOT / 'index.html', ROOT / 'projects.html'):
     for name in ('og:title', 'og:description', 'og:url', 'og:image', 'og:type'):
         assert any(tag == 'meta' and attrs.get('property') == name and attrs.get('content') for tag, attrs in document.elements)
     assert any(tag == 'link' and attrs.get('rel') == 'canonical' for tag, attrs in document.elements)
-    documents[path.name] = document
+    documents[str(path.relative_to(ROOT)).replace(chr(92),"/")] = document
 
 checked = 0
 for filename, document in documents.items():
@@ -69,7 +69,7 @@ for filename, document in documents.items():
         url = urlsplit(reference)
         if url.scheme or url.netloc:
             continue
-        target = unquote(url.path) or filename
+        target = (ROOT / Path(filename).parent / unquote(url.path)).resolve().relative_to(ROOT).as_posix() if url.path else filename
         assert (ROOT / target).is_file(), f'{filename}: missing asset {reference}'
         if url.fragment:
             assert target in documents and unquote(url.fragment) in documents[target].ids, f'{filename}: broken anchor {reference}'

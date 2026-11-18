@@ -48,3 +48,12 @@ Preserve the warm ivory, sunflower, and terracotta identity, local portrait asse
 The November update also removes decorative link arrows, redundant numbering, faux contact icons, and the rotating typewriter introduction. The opening copy is personal and static; the existing warm palette and portrait remain. The static checker prevents decorative link arrows from being reintroduced.
 
 The certificates section links to the supplied Quera evidence and a public Sematec PDF with the personal-identifier footer removed before PDF construction. Original private documents are not committed. Quera coursework timing and certificate issue timing are displayed separately; Sematec uses the certificate's course dates. Issuer logos sit beside the corresponding credential, and the TOEFL logo accompanies the language scores.
+
+
+## Completed SARA research — November18,2026
+
+Release1 preserved deployed master67ffe3a unchanged. Research case study:research/sara.html. Final cross-dataset aggregates are separate from historical CoraR1;CiteSeer negative results remain visible. Full draftPDF and private node/receipt data are not public. Existing portfolio assets,projects,CV and shared design remain intact.
+
+Refresh approved aggregates: `python tools/export_research.py --source-root <local-LLM-GNN-checkout>`,review the diff,update the exact results.json checksum in research/research.js,and its12-character assetSHA query in research/sara.html. Source hashes are recorded in results.json;never silently accept an unexplained scientific change. Only reviewed aggregate CSVs/receipt hashes are read;no scientific modules execute.
+
+Additional checks: `node --check research/research.js` and `python tools/research_check.py`. The latter uses existing local Playwright and Chrome,checks three studies and8widths,noJS,history and real saved-seed replay. Set `SITE_QA_URL=https://parand1khalili.github.io` for the production pass. Capture output is ignored under.preview;no full WCAG certification is claimed.

@@ -1,0 +1,10 @@
+# SARA website releases — 2026-11-18
+
+Release1: master67ffe3a2f1822e506fbb5407ddbc38b7686b49d7;Pages legacy root/master built. Local8f63ffb differed only by remote empty deployment-trigger commit;fast-forward preserved identical content. No manufactured commit. Home/projects returned200. Existing static check,node syntax and full browser suite passed(8widths,both pages,filters,menu,keyboard,noJS,reducedmotion,CV/assets,no runtime/network errors).
+
+Release2: research/sara.html with allowlisted results.json/research.js/research.css;existing homepage/thesis card updated;other projects/assets/CV retained. Static tables work withoutJS;interactive study/arm/seed selection,accuracy/populationSD bars,F1,coverage,matched-seed D/E,class recall and mean confusion. Original Cora GraphScope remains separately scoped;public thesisPDF withheld.
+
+Scientific source is read-only local LLM-GNN reports;no scientific source modifications/commits. Final freeze in request was truncated;use complete value in results.json,matched to November18thesis revision report. Historical Cora LR0.005 differs from old atlasLR0.01. PubMed positive and CiteSeer negative result both visible. L2 NOT_ASSESSED,134CiteSeer corrections unadjudicated,encoder provenance incomplete;exploratory only.
+
+
+Local Release2 verification:static checker3pages/139references PASS;shared/newJS syntax PASS;existing full portfolio regression PASS;research aggregates and8width replay/refresh/class tables/noJS/history PASS. Reports/screenshots under ignored.preview. Initial320px long-path overflow fixed;Chrome BFCache test issue resolved by disabling BFCache in test-only browser launch and rerunning. Detector's header-padding warning concerns unchanged shared header;layout kept consistent with incumbent site. Manual screen-reader,all-browser and full WCAG conformance are not claimed. No new font/framework/dependency or paid model/training was added. GraphScope changes are limited to contextual caption and current-study link;existing compiled assets/data/notices remain exact.
